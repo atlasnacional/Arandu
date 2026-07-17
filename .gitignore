@@ -1,0 +1,32 @@
+# === Anonimato / segredos — NUNCA versionar ===
+# Guardrails locais: contêm o denylist da identidade real, não podem ir a público.
+.githooks/
+# Config e skills locais do Claude Code.
+.claude/
+# Chaves e credenciais.
+*.pem
+*.key
+id_ed25519*
+id_rsa*
+.env
+.env.*
+.git-credentials
+*.token
+
+# === Sistema operacional ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# === Editores / IDEs ===
+.vscode/
+.idea/
+*.swp
+*~
+
+# === Node / caches de build (se algum dia o fonte vier pra cá) ===
+node_modules/
+.cache/
+.vite/
+*.log
