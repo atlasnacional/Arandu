@@ -31,7 +31,8 @@ congelados no snapshot (POSTs não existem).
    .\.venv\Scripts\python -m app.cli exportar-demo
    ```
 
-   Confira a pasta `frontend/public/demo/` (≈ 30 arquivos .json).
+   Confira a pasta `frontend/public/demo/` (centenas de arquivos .json — ~286,
+   incluindo snapshots por deputado, por município e da camada de violência).
 
 2. **Crie o repositório no GitHub** e envie o projeto:
 
@@ -39,7 +40,7 @@ congelados no snapshot (POSTs não existem).
    cd ..            # raiz do projeto
    git init
    git add .
-   git commit -m "Trans — transparência pública BR"
+   git commit -m "Arandu — Atlas Nacional da Transparência"
    git branch -M main
    git remote add origin https://github.com/SEU-USUARIO/SEU-REPO.git
    git push -u origin main

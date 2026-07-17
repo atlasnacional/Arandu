@@ -51,11 +51,11 @@ ele é: um sistema vivo, ferido e capaz de se regenerar.
 ## O canon
 
 O grito precisa de fundamento — senão é só indignação. O **canon** do Arandu é a
-biblioteca que sustenta essa leitura: **156 pensadores** organizados em **18 eixos**
-(sistemas complexos, redes e contágio social, trauma, violência estrutural,
-território, capital social, causalidade, e assim por diante). Não é erudição
-decorativa: cada autor é uma **lente**, um instrumento para enxergar um mecanismo do
-país.
+biblioteca que sustenta essa leitura: **197 pensadores** organizados em **28 eixos**
+(sistemas complexos, redes e contágio social, criminologia, neurociência, geografia
+crítica, IA, pensamento social brasileiro, cosmologias ameríndias, e assim por
+diante). Não é erudição decorativa: cada autor é uma **lente**, um instrumento para
+enxergar um mecanismo do país.
 
 De Bertalanffy e Prigogine (o sistema e a entropia) a Gary Slutkin (a violência como
 contágio); de Milton Santos (os dois circuitos da economia urbana) a Josué de Castro
@@ -80,7 +80,9 @@ afirma e se propõe a medir:
 12. **Da correlação à causalidade** — sair do mapa de correlações para o mapa de mecanismos.
 
 O manifesto completo e o canon vivem dentro da própria plataforma, na área
-**Abordagens e pensamento**.
+**Abordagens e pensamento** — e agora também na documentação: [o manifesto e as
+teses](docs/manifesto.md), [os 5 princípios do framework](docs/principios.md), [o
+canon completo](docs/canon.md) e [as abordagens e métodos](docs/abordagens-e-metodos.md).
 
 ---
 
@@ -96,9 +98,9 @@ A plataforma tem **mais de 30 telas**, distribuídas em sete frentes:
 | **Poder público** | deputados, senadores, municípios, templos religiosos |
 | **Dinheiro público** | licitações, fornecedores, diários oficiais |
 | **Investigação** | grafo de relações, radar de alertas e o modelo de risco por machine learning |
-| **Abordagens e pensamento** | o manifesto, as 12 teses e o canon de 156 pensadores |
+| **Abordagens e pensamento** | o manifesto, as 12 teses e o canon de 197 pensadores |
 
-O **radar de fraude** cruza as bases com uma dúzia de gatilhos — do fornecedor
+O **radar de fraude** cruza as bases com **15 gatilhos** — do fornecedor
 sancionado que recebe dinheiro público ao ciclo fechado *cota → empresa → sócio →
 doação → parlamentar*, passando por fracionamento de contratos, notas repetidas e
 concentração de fornecedor. O **modelo de risco** complementa com um score de ML.

@@ -1,21 +1,27 @@
-# Roadmap Trans 2026
+# Roadmap Arandu 2026
 
 Plano estratégico de expansão de dados e melhoria do frontend com fundamento em APIs públicas brasileiras.
+
+> Nota: a pasta do código e o arquivo de banco (`trans/`, `data/trans.db`) ainda carregam o nome herdado do projeto; o produto é o **Arandu — Atlas Nacional da Transparência**.
 
 ---
 
 ## 📋 Resumo Executivo
 
 ### O que você tem agora
-- 7 fontes de dados públicas ✅
-- 19 páginas do frontend ✅
-- Radar de fraude com 12+ gatilhos ✅
+- ~13 fontes de dados públicas ✅
+- mais de 30 telas navegáveis no frontend ✅
+- Radar de fraude com 15 gatilhos ✅
 - Dashboard básico ✅
+- **Já concluído** (era proposto aqui e hoje existe no código):
+  - Importador IBGE — população (`backend/app/etl/ibge_populacao.py` + tabela `populacao_grupo`) ✅
+  - Router de municípios (`backend/app/api/municipios.py`) ✅
+  - Dashboard municipal consolidado (`frontend/src/pages/MunicipioDetalhe.tsx` na rota `/municipios/:codigo`) ✅
 
 ### O que pode adicionar
-- **11 novas fontes de dados** (IBGE, Portal Transparência, CGU, SPU, ISP, TCU/TCE, etc)
+- **Novas fontes de dados** ainda futuras (Portal Transparência execução, CGU convênios, SPU, TCU/TCE, etc)
 - **5+ análises cruzadas** (ciclo expandido, hotspots municipais, conformidade, etc)
-- **8 novas páginas** (dashboard municipal, scorecard de risco, mapa de hotspots, etc)
+- **Novas páginas** (scorecard de risco, mapa de hotspots, etc — o dashboard municipal já existe)
 - **Design system refinado** (paleta, tipografia, componentes)
 - **20+ features funcionais** (comparador, busca avançada, exportação, etc)
 
@@ -164,7 +170,7 @@ backend/app/services/
 └── conformidade.py       (feedback auditoria)
 
 backend/app/api/
-├── municipios.py         (novo router)
+├── municipios.py         (JÁ IMPLEMENTADO)
 ├── scorecard.py          (novo router)
 └── hotspots.py           (novo router)
 ```
@@ -173,7 +179,7 @@ backend/app/api/
 
 ```
 frontend/src/pages/
-├── Municipio/:ibge.tsx        (novo)
+├── MunicipioDetalhe.tsx       (JÁ IMPLEMENTADO — rota /municipios/:codigo)
 ├── FornecedorRisco/:cnpj.tsx  (ampliado)
 └── Investigacao/
     ├── Hotspots.tsx           (novo)
@@ -307,7 +313,7 @@ R: SQLite + Python rodam em qualquer VPS (R$ 50/mês). Escalável até 100M linh
 
 ## 🎯 Visão Final
 
-Transformar Trans de **"dashboard de dados"** em **"narrativa de accountability"**:
+Transformar o Arandu de **"dashboard de dados"** em **"narrativa de accountability"**:
 
 ```
 Dado bruto (CEAP, PNCP, IPEA, TSE)

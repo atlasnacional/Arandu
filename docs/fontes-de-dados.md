@@ -86,3 +86,59 @@ e as armadilhas que já custaram debugging real neste projeto.
   `api/live.py` para evitar CORS).
 - Querido Diário: a API fica em `https://api.queridodiario.ok.org.br`
   (⚠️ o path `/api` do site principal serve HTML, não JSON).
+
+---
+
+# Camada de violência
+
+As fontes abaixo alimentam a camada de violência (tabelas `violencia`,
+`mortes_violentas`, `saude_mental`, `populacao_grupo`, `bares_bebidas`,
+`templos_religiosos`, etc.). Todas sem token.
+
+## Ipea / Atlas da Violência (via Ipeadata)
+
+- ETL: `etl/ipea.py`. Fonte programática: a API OData4 do **Ipeadata**:
+  `http://www.ipeadata.gov.br/api/odata4/Metadados` e
+  `http://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='AVIOL12_HOMIC')`.
+- ⚠️ O site novo do Atlas (`ipea.gov.br/atlasviolencia`) foi reescrito em Next.js e
+  o endpoint antigo `/atlasviolencia/api/v1/...` responde **404** — por isso usa-se
+  o Ipeadata, que é a mesma base (SIM/DataSUS consolidado pelo Ipea) e é
+  programática. Alimenta também `indicadores_sociais` e `despesa_funcao`.
+
+## SIM/DataSUS — microdado de óbito
+
+- ETL: `etl/sim.py`. Arquivos:
+  `ftp.datasus.gov.br` → `/dissemin/publicos/SIM/CID10/DORES/DO<UF><ANO>.dbc`.
+- ⚠️ O `ftp.datasus.gov.br` responde **só na porta 21 (FTP)** — 80/443 dão timeout,
+  então httpx não serve; usa-se `ftplib`.
+- ⚠️ O `.dbc` é um **DBF comprimido com Blast (PKWare)** — não é gzip nem zip.
+  Descomprime com `datasus_dbc.decompress()` e lê o DBF com `dbfread`.
+
+## CNES — rede de saúde mental
+
+- ETL: `etl/cnes.py`. Mesmo FTP do SIM (também **só na porta 21**):
+  `/dissemin/publicos/CNES/200508_/Dados/ST/ST<UF><AAMM>.dbc` (estabelecimentos) e
+  `.../LT/LT<UF><AAMM>.dbc` (leitos).
+- ⚠️ O DBF do CNES **não escreve o byte terminador (0x0D)** da lista de campos —
+  pegadinha na leitura do cabeçalho.
+
+## OMS/GHO e Our World in Data (domínio mundo)
+
+- ETL: `backend/app/domains/mundo/etl.py`.
+- WHO GHO OData: `https://ghoapi.azureedge.net/api/{CODE}` — indicadores de saúde
+  por país.
+- Our World in Data: `https://ourworldindata.org/grapher/{slug}.csv` — usado para o
+  consumo de álcool (o GHO não tem o agregado; o OWID cobre 185 países).
+
+## Receita Federal — dump de CNPJ (bares e templos)
+
+- ETLs: `etl/bares.py` (comércio de bebidas) e `etl/templos.py` (organizações
+  religiosas, CNAE 9491-8/00). É o **dump de CNPJ (Estabelecimentos)** da Receita,
+  não uma API de consulta.
+- Acesso (verificado jul/2026) via WebDAV:
+  `https://arquivos.receitafederal.gov.br/public.php/webdav/{AAAA-MM}/{arquivo}`,
+  autenticando com usuário = TOKEN e senha vazia (`curl -u "TOKEN:"`).
+- ⚠️ O diretório HTTP antigo (`.../dados_abertos_cnpj/AAAA-MM/`) foi desativado em
+  jan/2026 e dá **404**. O token pode mudar; quando muda, reaparece na URL do share
+  em dados.gov.br. O token corrente fica em `settings`.
+- ⚠️ O campo de município no CSV é o **código TOM da Receita (4 díg.)**, não o IBGE.

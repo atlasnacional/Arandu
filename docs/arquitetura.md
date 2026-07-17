@@ -16,12 +16,27 @@
                     │                       (15 gatilhos→alertas) │   páginas em src/pages
  IBGE / Q.Diário ───┤► api/live (proxy ao vivo, sem armazenar)    │
                     │                       services/modelo.py    │
-                    │                       (ML → scores_fraude)  │
+ ─── CAMADA DE VIOLÊNCIA ────────────────── (ML → scores_fraude)  │
+ IBGE/SIDRA (pop) ──┤► etl/ibge_populacao ─┐                       │
+ Ipea/Atlas Viol. ──┤► etl/ipea ───────────┤                       │
+ SIM/DataSUS (FTP) ─┤► etl/sim ────────────┤   domains/*/router.py │  ~20 telas em
+ CNES (FTP) ────────┤► etl/cnes ───────────┼──►(alcool, conjugal,  ├─►  src/pages/violencia
+ OMS/GHO + OWID ────┤► domains/mundo/etl ───┤   mundo, diagnostico, │
+ Receita (dump CNPJ)┤► etl/bares, templos ──┘   regioes)           │
                     └─────────────────────────────────────────────┘
 ```
 
 O padrão é sempre o mesmo: **ETL baixa → normaliza → grava no SQLite; os
 serviços cruzam as tabelas; a API expõe; o React desenha.**
+
+O app tem hoje **duas camadas**: a de **transparência/fraude** (parlamentares,
+licitações, fornecedores, radar de fraude) e a de **violência** — hoje o maior
+bloco, com ~20 telas em `frontend/src/pages/violencia/` (Panorama, Regiões,
+Juventude, Quem morre, Armas, Suicídio, Álcool, Bares, Mundo, Saúde mental,
+Conjugal, Gênero, etc.). A camada de violência é servida por **domínios
+modulares** em `backend/app/domains/` (`alcool`, `conjugal`, `mundo`,
+`diagnostico`, `regioes`), cada um com seu `router.py` e `etl.py`, registrados
+em `main.py`.
 
 ## Tabelas principais (`backend/app/models.py`)
 
@@ -38,6 +53,20 @@ serviços cruzam as tabelas; a API expõe; o React desenha.**
 | `alertas` | saída do radar de fraude | `cnpj`, `parlamentar_id`, `tipo` |
 | `scores_fraude` | saída do modelo ML | `cnpj` |
 | `sync_log` | histórico de importações | — |
+
+`models.py` tem **21 tabelas** no total (não 11) — as demais são da camada de
+violência:
+
+| Tabela | Conteúdo | Fonte |
+|---|---|---|
+| `violencia` | séries de homicídio/violência por território | Ipea/Atlas (`etl/ipea.py`) |
+| `populacao_grupo` | população por recorte demográfico (denominador de taxas) | IBGE/SIDRA (`etl/ibge_populacao.py`) |
+| `mortes_violentas` | microdado de óbito por causa externa | SIM/DataSUS (`etl/sim.py`) |
+| `saude_mental` | rede CAPS/leitos de saúde mental por município | CNES (`etl/cnes.py`) |
+| `indicadores_sociais` | indicadores sociais de contexto | Ipeadata (`etl/ipea.py`) |
+| `despesa_funcao` | despesa pública por função | Ipeadata (`etl/ipea.py`) |
+| `bares_bebidas` | bares/comércio de bebidas por município | dump CNPJ Receita (`etl/bares.py`) |
+| `templos_religiosos` | organizações religiosas por município | dump CNPJ Receita (`etl/templos.py`) |
 
 ### Como as entidades se ligam (o "grafo")
 
@@ -83,3 +112,4 @@ como indício, não prova.
 | nova feature do ML | `services/modelo.py`: adicionar em `FEATURES` + calcular em `montar_features()` |
 | nova página | `frontend/src/pages/X.tsx` + rota e link em `App.tsx` |
 | novo endpoint | router em `backend/app/api/` + registrar em `main.py` |
+| novo domínio de violência | pasta `app/domains/<nome>/` com `router.py` + `etl.py` (padrão modular) + registrar o router em `main.py` |

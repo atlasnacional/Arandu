@@ -22,6 +22,10 @@ npm --version       # vem junto com o Node
 Com git: `git clone <url-do-repo>` e `cd trans`.
 Sem git: baixe o ZIP no GitHub (botão **Code → Download ZIP**) e extraia.
 
+> O nome da pasta criada ao clonar depende do repositório (pode ser `Arandu`).
+> Os comandos abaixo usam `cd trans` — ajuste para o nome da sua pasta. O produto
+> é o **Arandu**; `trans` é apenas o nome herdado do diretório/banco.
+
 ## 3. Backend (o servidor de dados)
 
 ```powershell

@@ -71,8 +71,10 @@ mão):
 | 4 | `saude-mental` (CNES) | — | ~min |
 | 5 | `consumo-alcool` | violencia | leve (PNS via SIDRA) |
 | 6 | `conjugal` | sim + violencia | leve (OMS/GHO) |
+| 6a | `mundo` | — | leve — referência global (OMS/GHO + OWID), ~7 requisições |
 | 6b | `sinan` | violencia | **PESADO** — microdado SINAN Violência (~40 MB/ano) |
 | 7 | `bares` | violencia + sim | **PESADO** — 5,3 GB |
+| 7b | `templos` | — | **PESADO** — reprocessa o dump de CNPJ da Receita |
 | 8 | câmara / senado / ceaps / sanções | — | leve |
 | 9 | `tse-candidatos` / `tse-doacoes` | — | médio (ZIP grande, fica em cache) |
 | 10 | `pncp-licitacoes` / `pncp-contratos` | — | médio (janela de `--pncp-dias`) |

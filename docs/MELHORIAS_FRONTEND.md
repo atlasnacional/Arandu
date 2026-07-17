@@ -1,4 +1,4 @@
-# Melhorias do Frontend — Trans
+# Melhorias do Frontend — Arandu
 
 Guia de aprimoramentos visuais e de funcionalidade para acompanhar a expansão de dados.
 
@@ -144,7 +144,10 @@ Cores gradiente: azul (baixo risco) → vermelho (alto risco)
 
 ## 📄 Novas Páginas
 
-### 1. **`/municipios/:ibge` — Dashboard Municipal**
+### 1. **`/municipios/:codigo` — Dashboard Municipal** ✅ JÁ EXISTE
+
+> Esta página **já existe** em `frontend/src/pages/MunicipioDetalhe.tsx` (rota
+> `/municipios/:codigo`). Os itens abaixo são **expansões** sugeridas sobre ela.
 
 Consolidar tudo que sabemos sobre um município:
 - **Header**: Nome, UF, população (IBGE), taxa de homicídios (IPEA)
@@ -549,7 +552,7 @@ Se em `/fornecedores/12345`, sidebar mostra:
 ### Médio (Semana 3–4)
 - [ ] Busca avançada
 - [ ] Comparador
-- [ ] Dashboard municipal
+- [x] Dashboard municipal (já existe — `MunicipioDetalhe.tsx`; falta expandir seções)
 
 ### Baixo (Semana 5+)
 - [ ] Sankey, Scatter

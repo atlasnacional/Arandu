@@ -1,6 +1,8 @@
-# Expansão de Dados — Trans
+# Expansão de Dados — Arandu
 
 Plano de enriquecimento com novas fontes públicas brasileiras e análises cruzadas com fundamento e referência de base.
+
+> Nota: a pasta do código e o banco (`trans/`, `data/trans.db`) mantêm o nome herdado; o produto é o **Arandu — Atlas Nacional da Transparência**.
 
 ---
 
@@ -13,9 +15,14 @@ Plano de enriquecimento com novas fontes públicas brasileiras e análises cruza
 | **PNCP** | Licitações + contratos públicos | API (com backoff) | `contratacoes`, `contratos` | ✅ Ativo |
 | **TSE** | Eleições + doações campanha | Dump ZIP | `candidatos`, `doacoes` | ✅ Ativo |
 | **Portal Transparência** | CEIS/CNEP (sanções) | Dump diário (sem token) | `sancoes` | ✅ Ativo |
-| **IPEA** | Homicídios por município/ano | Ipeadata + Atlas | `violencia`, `despesa_funcao` | ✅ Ativo |
+| **IPEA / Atlas da Violência** | Homicídios, indicadores sociais, despesa por função | Ipeadata (`etl/ipea.py`) | `violencia`, `despesa_funcao`, `indicadores_sociais` | ✅ Ativo |
 | **Receita Federal** | CNPJ cache (QSA, situação) | minhareceita.org + BrasilAPI | `empresas` | ✅ Ativo |
-| **Querido Diário** | Diários oficiais municipais | API pública | (planejado) | ⏳ Não usado |
+| **Querido Diário** | Diários oficiais municipais | API pública (proxy ao vivo em `api/live.py`) | — (página `Diarios.tsx`) | ✅ Ativo |
+| **IBGE — população** | População por recorte demográfico (denominador de taxas) | SIDRA (`etl/ibge_populacao.py`) | `populacao_grupo` | ✅ Ativo |
+| **SIM/DataSUS** | Microdado de óbito por causa externa | FTP porta 21 (`etl/sim.py`) | `mortes_violentas` | ✅ Ativo |
+| **CNES** | Rede de saúde mental (CAPS/leitos) por município | FTP porta 21 (`etl/cnes.py`) | `saude_mental` | ✅ Ativo |
+| **OMS/GHO + OWID** | Referência global (álcool, saúde) por país | GHO OData + OWID (`domains/mundo/etl.py`) | (domínio mundo) | ✅ Ativo |
+| **Receita — dump CNPJ** | Bares/comércio de bebidas e organizações religiosas | dump CNPJ Receita (`etl/bares.py`, `etl/templos.py`) | `bares_bebidas`, `templos_religiosos` | ✅ Ativo |
 
 ---
 
@@ -47,6 +54,7 @@ Plano de enriquecimento com novas fontes públicas brasileiras e análises cruza
   ```
 
 #### 2. **IBGE — Contagem de População Municipal**
+- **Status**: ✅ Já implementado (`etl/ibge_populacao.py` → tabela `populacao_grupo`).
 - **Endereço**: `https://servicodados.ibge.gov.br/api/v1`
 - **O que traz**: População por município, UF, recenseamento
 - **Cobertura**: 2010, 2020 (e projeções)
@@ -123,6 +131,7 @@ Plano de enriquecimento com novas fontes públicas brasileiras e análises cruza
 ### Grupo 3: Crime & Segurança (Complementar ao IPEA)
 
 #### 6. **SIM-PC — Sistema de Informação de Mortalidade (DATASUS)**
+- **Status**: ✅ Já implementado (`etl/sim.py` → tabela `mortes_violentas`, via FTP porta 21).
 - **Endereço**: `https://datasus.saude.gov.br/transferencia-de-arquivos/`
 - **O que traz**: Óbitos por causa (inclui homicídios, mas também suicídios, etc)
 - **Cobertura**: 1979–hoje, por município
@@ -417,7 +426,7 @@ CREATE TABLE hotspots (
 
 ## 🎯 Impacto Esperado
 
-- ✅ **Cobertura de dados**: De 7 fontes → 12+ fontes
+- ✅ **Cobertura de dados**: ~13 fontes já ativas (as futuras abaixo somam sobre elas)
 - ✅ **Análises cruzadas**: De ciclo simples → 5+ análises multidimensionais
 - ✅ **Fundamento legal**: Cada alerta terá referência a norma ou estudo
 - ✅ **Contexto municipal**: Dashboard de "por que este município, por que este fornecedor"
