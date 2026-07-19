@@ -23,6 +23,15 @@ Plano de enriquecimento com novas fontes públicas brasileiras e análises cruza
 | **CNES** | Rede de saúde mental (CAPS/leitos) por município | FTP porta 21 (`etl/cnes.py`) | `saude_mental` | ✅ Ativo |
 | **OMS/GHO + OWID** | Referência global (álcool, saúde) por país | GHO OData + OWID (`domains/mundo/etl.py`) | (domínio mundo) | ✅ Ativo |
 | **Receita — dump CNPJ** | Bares/comércio de bebidas e organizações religiosas | dump CNPJ Receita (`etl/bares.py`, `etl/templos.py`) | `bares_bebidas`, `templos_religiosos` | ✅ Ativo |
+| **Receita — dump CNPJ (completo)** | Tecido empresarial do país: 27,8 mi de empresas ativas, 28 setores e 41 atividades CNAE | dump CNPJ Receita | (painel `/economia-brasil`) | ✅ Ativo |
+| **Banco Central — SGS** | Séries macro: trabalho, crédito, dívida, juros/inflação, câmbio | API SGS | (painel `/economia`) | ✅ Ativo |
+| **SIAPE** | Inativos e pensões do Executivo federal, supersalários | Dump | (painel `/pensoes`) | ✅ Ativo |
+| **IBGE — Censo 2022** | Demografia indígena e quilombola (1ª contagem quilombola) | SIDRA/Censo | (painéis `/indigenas`, `/quilombolas`) | ✅ Ativo |
+| **FUNAI / INCRA / Fundação Palmares** | Demarcação de terras indígenas e titulação quilombola | Dados abertos | (painéis de território) | ✅ Ativo |
+| **CIMI** | Violência contra povos indígenas (relatório anual) | Relatório | (painel `/indigenas`) | ✅ Ativo |
+| **SINAN/DataSUS** | Violência interpessoal notificada, com recorte LGBTQIA+ | Dump | (telas conjugais) | ✅ Ativo |
+
+> Todas mantêm a invariante do projeto: **sem token, sem cadastro**.
 
 ---
 

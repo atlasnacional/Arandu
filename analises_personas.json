@@ -1,0 +1,897 @@
+{
+  "gerado_em": "2026-07-17",
+  "grande_leitura": "Visto de cima, o dinheiro público brasileiro se organiza menos por fraude sofisticada e mais por atritos estruturais entre a regra e sua execução. A campanha que decide o poder já roda majoritariamente com dinheiro do erário — 77,69% das doações entram como fundo público via partido, e não mais pelo eleitor. A fronteira entre doador e fornecedor é porosa: 98 empresas transformaram R$2,09 mi de doação em R$50,73 mi de contrato (24,2x), sem que os dados provem que uma coisa comprou a outra. Do lado do gasto, o maior buraco não é engenhoso — 82% de toda a exposição a risco (R$52,52 bi) é empresa já sancionada que segue recebendo: falha de execução, não de legislação. No território, contratos habitacionais de meio bilhão pousam em municípios minúsculos; nos mercados, os nichos técnicos de conhecimento concentram mais que os grandes potes de volume. Nada disso é veredito — quase tudo aqui é exposição e sinal, e o valor da plataforma está em cruzar o que estava separado. É também onde o Arandu mais tem a crescer: ligar sanção a bloqueio de pagamento, abrir contrato a contrato os outliers municipais, e buscar os dados de alocação interna do fundo partidário que faltam para fechar as teses que os números apenas abrem.",
+  "insights": [
+    {
+      "titulo": "82% de todo o risco mapeado cabe num só padrão: empresa sancionada que segue recebendo",
+      "leitura": "Dos R$64,18 bi de exposição a risco, R$52,52 bi (81,8%) vêm de uma única família — empresa já punida que continua faturando — e 3,28% de todo o gasto vai a fornecedor sancionado. Beccaria: dissuade a certeza da pena, não sua severidade; aqui a sanção existe no papel e não corta o caixa. Ressalva que sustenta o achado em vez de enfraquecê-lo: é exposição, não crime provado — sanções têm escopo e prazo, e parte pode ser lícita. Mesmo assim, o risco não está pulverizado, está num alvo: a maior alavanca de integridade não é criar norma nova, é ligar a sanção ao bloqueio do desembolso.",
+      "persona": "O Criminólogo do Colarinho",
+      "pensadores": [
+        "Cesare Beccaria",
+        "Edwin Sutherland",
+        "Charles Tilly"
+      ],
+      "numeros": [
+        "exposição total R$64,18 bi",
+        "empresa punida ainda recebendo R$52,52 bi (81,8%)",
+        "taxa sancionado 0,0328",
+        "alertas de alta severidade 106.396 de 110.542"
+      ],
+      "tema": "Vazamento",
+      "forca": 4,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Cesare Beccaria",
+            "obra": "Dos Delitos e das Penas (1764)",
+            "conceito": "A prevenção do crime vem da CERTEZA e da prontidão da punição, não de sua severidade."
+          },
+          {
+            "autor": "Edwin Sutherland",
+            "obra": "O Crime do Colarinho Branco (1949)",
+            "conceito": "Crime cometido por pessoas de respeitabilidade no exercício da ocupação — invisível ao estereótipo do criminoso."
+          },
+          {
+            "autor": "Charles Tilly",
+            "obra": "Durable Inequality (1998); A Formação do Estado como Crime Organizado (1985)",
+            "conceito": "A desigualdade durável se reproduz por acaparamento de oportunidades entre categorias, não por mérito."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021, art. 156",
+            "nota": "gradua sanções e o impedimento de licitar/contratar da empresa punida"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 12.846/2013 (Lei Anticorrupção)",
+            "nota": "responsabiliza a pessoa jurídica e alimenta o CNEP"
+          },
+          {
+            "tipo": "Cadastro",
+            "ref": "CEIS/CNEP — Portal da Transparência (CGU)",
+            "nota": "cadastros de empresas inidôneas e punidas cruzados nesta análise"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU e CGU",
+            "nota": "controle externo e interno, auditoria baseada em risco"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "A leitura confunde \"família mais volumosa\" com \"família mais arriscada\" — e o volume é artefato da definição, não do perigo. \"Empresa punida ainda recebendo\" é a regra mais barata e mais larga do conjunto: basta cruzar um CNPJ com o registro de sanções e somar TODO pagamento a ele. Por construção ela captura o maior valor. Os próprios FATOS entregam a pista: essa família responde por R$52,52 bi enquanto padrões que exigem evidência comportamental real — fracionamento (R$0,63 bi / taxa 0,04%), notas idênticas (R$0,23 bi), concentração (R$0,18 bi) — são ordens de grandeza menores. Isso não mostra que o risco \"cabe num só padrão\"; mostra que uma regra binária de registro, aplicada a um volume gigante de contratos, infla mecanicamente. Pior: o próprio insight admite que sanção tem escopo e prazo. Ou seja, dentro dos R$52,52 bi está embutido pagamento cuja sanção (i) só vigorou depois do desembolso, ou (ii) valia para outro ente/modalidade que não barrava aquele contrato. Nada disso é filtrado. E os 3,28% do gasto que vão a fornecedor sancionado podem ser simplesmente a taxa-base: se X% das empresas ativas carregam alguma sanção, esperaríamos ~X% do gasto chegando a elas mesmo sem qualquer falha de controle. Sem a taxa-base da população de fornecedores, 3,28% pode ser ruído estatístico, não sinal.",
+        "condicao": "A contra-leitura vence se, ao restringir \"empresa punida ainda recebendo\" aos pagamentos em que a sanção estava (a) VIGENTE na data do desembolso E (b) com escopo legal que efetivamente vedava aquele órgão/modalidade, os R$52,52 bi encolherem para uma fração pequena — e se os 3,28% ficarem iguais ou abaixo da taxa-base de CNPJs sancionados no universo elegível de fornecedores. Se ambos os testes passarem, os 82% eram um artefato de denominador largo, e o risco real se redistribui para as famílias comportamentais menores, hoje subvalorizadas.",
+        "sintese": "O número \"82%\" mede a largura da rede da regra, não a concentração do dano — a manchete superestima porque não separa sanção vigente-e-no-escopo de sanção expirada ou fora de escopo, nem contra a taxa-base. Mas a tese de mecanismo sobrevive intacta: ligar sanção ao bloqueio do desembolso é barato e correto mesmo que só uma fatia dos R$52,52 bi seja acionável, porque é exatamente esse filtro (vigência + escopo) que o controle hoje não aplica na hora do pagamento."
+      }
+    },
+    {
+      "titulo": "Cada real doado voltou como R$24 em contrato — e no topo, R$600 anteciparam R$14,4 milhões",
+      "leitura": "As 98 empresas que doaram em campanha E depois venceram contratos concentram R$2,09 mi em doações contra R$50,73 mi recebidos: alavancagem agregada de 24,2x, com a MAXXI VIX em 23.997x (R$600 → R$14,4 mi). Ressalva inerente ao recorte: essas 98 foram selecionadas justamente por fazer as duas coisas, e coincidência temporal não prova que a doação comprou o contrato. Mazzucato (risco socializado, retorno privatizado) e o 'r' de Piketty nomeiam o padrão — retorno de acesso, não de produtividade. O que o dado mede com firmeza é a magnitude e a existência do canal; fechar a causalidade exige abrir contrato a contrato.",
+      "persona": "A Economista do Valor",
+      "pensadores": [
+        "Thomas Piketty",
+        "Mariana Mazzucato",
+        "Mancur Olson"
+      ],
+      "numeros": [
+        "98 empresas",
+        "doado R$2,09 mi",
+        "recebido R$50,73 mi",
+        "alavancagem_media 24,2",
+        "MAXXI VIX: doou R$600, recebeu R$14,4 mi, alav 23997,6"
+      ],
+      "tema": "Rentismo",
+      "forca": 4,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Thomas Piketty",
+            "obra": "O Capital no Século XXI (2013)",
+            "conceito": "Quando o retorno do capital (r) supera o crescimento (g), a renda de patrimônio se concentra — rentismo."
+          },
+          {
+            "autor": "Mariana Mazzucato",
+            "obra": "O Estado Empreendedor (2013)",
+            "conceito": "O Estado socializa o risco e cria valor; o desafio é separar criação de valor de extração de renda."
+          },
+          {
+            "autor": "Mancur Olson",
+            "obra": "A Lógica da Ação Coletiva (1965); Ascensão e Declínio das Nações (1982)",
+            "conceito": "Grupos pequenos e organizados capturam benefícios concentrados às custas de uma maioria difusa (coalizões distributivas)."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Decisão",
+            "ref": "ADI 4650 (STF, 2015)",
+            "nota": "declarou inconstitucional a doação de empresas a campanhas"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TSE e TCU",
+            "nota": "prestação de contas eleitoral e fiscalização dos contratos"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "O número \"24x\" não mede um canal — é um artefato mecânico da forma de selecionar e da escala das grandezas. (1) Efeito de seleção: as 98 foram escolhidas por já terem feito as duas coisas; comparar o que doaram com o que receberam dentro desse grupo é circular. (2) Grandezas incomensuráveis: doação eleitoral é pequena por natureza (teto legal, gasto de campanha), contrato público é grande por natureza (uma obra vale milhões). Qualquer empresa que faça as duas coisas exibirá \"alavancagem\" enorme automaticamente — MAXXI VIX doou R$600 e o 23.997x só reflete que R$600 é um erro de arredondamento, não intensidade de captura. (3) Média imprópria: a \"alavancagem média 24,2x\" é a média de razões, dominada por outliers de doação mínima; FACEBOOK (doou R$92.958, recebeu R$9,2mi, 99,3x) mostra que quando a doação não é irrisória a razão despenca — o 24,2x é inflado, não típico. (4) Denominador ausente e magnitude trivial: 98 empresas contra dezenas de milhares por setor (34.415 na construção, 46.607 na saúde); os R$50,73mi recebidos são 0,003% dos R$1.563,61bi classificados. Sem a taxa-base (quantas doaram e PERDERAM, quantas venceram sem doar), a coincidência não vira nem canal nem magnitude. (5) Causa alternativa (confundidor de tamanho): empresa grande e capaz ganha contratos grandes E pode doar — as duas coisas são efeito do porte, não uma causando a outra.",
+        "condicao": "A contra-leitura vence se, ao comparar as doadoras-vencedoras com um controle pareado (mesmo porte/setor de empresas que doaram e NÃO venceram, e que venceram sem doar), a taxa de vitória e o valor ganho forem estatisticamente iguais — ou seja, doar não eleva a probabilidade nem o tamanho do contrato acima do que o porte já explica. E se, ao usar a mediana da razão em vez da média, o \"24x\" colapsar para um valor sem destaque, confirmando que o número é artefato de outliers de doação ínfima. Se ambos se confirmarem, não há canal medido, só uma lista pós-selecionada.",
+        "sintese": "O que resta de pé é modesto mas real: existem 98 firmas nomeáveis que doaram e depois venceram contratos, uma lista concreta que merece auditoria caso a caso — sobretudo os padrões \"doação irrisória + contrato milionário\" como o da MAXXI VIX, úteis como sinal de onde olhar. O que não sobra é o \"R$1 vira R$24\": esse número não é retorno sobre investimento nem magnitude de captura, é a justaposição de duas grandezas incomensuráveis num grupo escolhido a dedo, e sem taxa-base não prova nem causalidade nem sequer o tamanho do canal que diz apenas existir."
+      }
+    },
+    {
+      "titulo": "O financiamento de campanha virou majoritariamente público — e passa pelo partido, não pelo eleitor",
+      "leitura": "77,69% das doações (R$8,27 bi de R$10,64 bi) entram como fundo público repassado via partido — 5,3x o que vem de pessoas físicas (R$1,57 bi). North: mudou a regra de acesso ao recurso de disputa; Olson: o partido deixa de ser um entre vários financiadores e vira o funil. Limite honesto: os dados mostram o fluxo agregado passando pelo fundo, não como cada direção rateia nem que ela decide discricionariamente 'quem compete' — e o canal não é exclusivo (há R$1,57 bi de PF e R$0,51 bi de recursos próprios por fora). O que se sustenta, e já é potente: a dependência estrutural da máquina partidária para financiar campanha aumentou.",
+      "persona": "A Institucionalista",
+      "pensadores": [
+        "Douglass North",
+        "Mancur Olson"
+      ],
+      "numeros": [
+        "fatia_publica 0,7769",
+        "fundo público via partido R$8,27 bi",
+        "pessoas físicas R$1,57 bi",
+        "total doações R$10,64 bi"
+      ],
+      "tema": "Eleições",
+      "forca": 3,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Douglass North",
+            "obra": "Instituições, Mudança Institucional e Desempenho Econômico (1990)",
+            "conceito": "Instituições são as regras do jogo E sua execução; elas moldam a estrutura de incentivos da economia."
+          },
+          {
+            "autor": "Mancur Olson",
+            "obra": "A Lógica da Ação Coletiva (1965); Ascensão e Declínio das Nações (1982)",
+            "conceito": "Grupos pequenos e organizados capturam benefícios concentrados às custas de uma maioria difusa (coalizões distributivas)."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Decisão",
+            "ref": "ADI 4650 (STF, 2015)",
+            "nota": "fim da doação empresarial a campanhas e partidos"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 13.165/2015 (minirreforma eleitoral)",
+            "nota": "consolidou a proibição da doação de pessoa jurídica"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 13.487/2017",
+            "nota": "criou o Fundo Especial de Financiamento de Campanha (FEFC)"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TSE — dados abertos",
+            "nota": "prestação de contas eleitorais, fonte das doações"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "O rótulo \"fundo público VIA partido\" confunde encanamento legal com poder político, e o denominador infla a conclusão. O grosso dos R$8,27 bi é o Fundo Especial (FEFC) — uma dotação orçamentária FIXADA em lei que, por desenho estatutário, só pode transitar pelo partido. Ou seja, \"passa pelo partido\" não é achado empírico de dependência crescente: é a regra de repasse. Pior, a comparação \"5,3x o que vem de PF\" opõe uma verba exógena e carimbada (quanto o Congresso decidiu alocar ao fundo) a um comportamento endógeno e voluntário (doação de PF) — a verba pública domina por construção, não por captura. E há causa alternativa mais econômica que \"a dependência da máquina aumentou\": a proibição das doações empresariais (2015) esvaziou a maior fonte privada anterior, e o FEFC foi criado (2017) justamente para preencher o vácuo. A migração para o público é SUBSTITUIÇÃO legislativa, não escalada orgânica do poder partidário. Some-se o viés de subcobertura no privado: \"recursos próprios do candidato\" em apenas R$0,51 bi é suspeito de teto legal/subdeclaração, o que empurra artificialmente a fatia pública para cima.",
+        "condicao": "A contra-leitura vence se (1) a fatia de R$8,27 bi for dominada pelo FEFC, cujo valor é fixado por lei e que legalmente NÃO pode contornar o partido — provando que \"via partido\" descreve o trâmite obrigatório, não discricionariedade crescente; E (2) a série histórica mostrar que o salto da fatia pública coincide temporalmente com a proibição empresarial (2015) e a criação do fundo (2017), com o total privado (PF + empresa + próprios) tendo sido maioria antes disso — o que caracterizaria substituição de fonte, não aumento de dependência. Teste decisivo: decompor os R$8,27 bi em FEFC (dotação carimbada) vs. Fundo Partidário/repasses discricionários, e comparar pré e pós-2017. Se o público já era desenho legal e o privado caiu por veto judicial, a frase \"dependência estrutural aumentou\" não se sustenta como causal.",
+        "sintese": "Fica de pé o fato bruto: hoje o dinheiro público é maioria (77,69%) e, por lei, transita obrigatoriamente pelo partido — o que dá à cúpula partidária um portão real sobre a alocação. O que não se sustenta é ler isso como \"dependência estrutural da máquina que aumentou\" por dinâmica de poder: a composição mudou sobretudo pela mecânica legal (veto às empresas + criação do fundo). O próprio insight já se protege ao dizer que vê o fluxo agregado e não o rateio — e é exatamente aí, na discricionariedade da direção sobre o rateio, que mora a pergunta aberta, não na fatia agregada."
+      }
+    },
+    {
+      "titulo": "Um contrato, meio bilhão: habitação de porte desproporcional aterrissando em municípios minúsculos",
+      "leitura": "A média nacional é ~R$1,5 mi por contrato de habitação (R$8,97 bi / 5.945), mas Olho d'Água das Flores/AL registra UM contrato de R$535,8 mi (~355x a média), Barreirinha/AM tem R$193,6 mi por contrato e Olivença/AL, R$137,1 mi. Massey: o espaço tem geometria de poder — cifras que a economia dessas cidades dificilmente produz por dentro. Ressalva firme: é sinal e anomalia geográfica, não desvio provado; pode ser projeto federal grande e regular, e não há no dado vínculo entre esses municípios e os maiores grupos (M D M dos Santos, R$551,5 mi; Caixa) nem com o risco sancionado nacional. Valor-por-contrato desproporcional em município pequeno é um ótimo critério de priorização de auditoria — o próximo passo é abrir cada contrato.",
+      "persona": "O Geógrafo do Capital",
+      "pensadores": [
+        "Doreen Massey",
+        "Mark Granovetter"
+      ],
+      "numeros": [
+        "Habitação R$8,97 bi em 5.945 contratos (média ~R$1,5 mi)",
+        "Olho d'Água das Flores/AL: 1 contrato de R$535,8 mi",
+        "Barreirinha/AM: R$580,8 mi, R$193,6 mi por contrato",
+        "Olivença/AL: R$137,1 mi por contrato",
+        "M D M DOS SANTOS ENGENHARIA: R$551,5 mi (1 CNPJ)"
+      ],
+      "tema": "Território",
+      "forca": 3,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Doreen Massey",
+            "obra": "Pelo Espaço (2005); Espaço, Lugar e Gênero (1994)",
+            "conceito": "O espaço é uma geometria de poder: alguns comandam os fluxos, outros apenas os recebem."
+          },
+          {
+            "autor": "Mark Granovetter",
+            "obra": "The Strength of Weak Ties (1973)",
+            "conceito": "A ação econômica está imbricada (embedded) em redes de relações sociais, não em preços isolados."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "Ministério das Cidades",
+            "nota": "política habitacional federal (ex.: Minha Casa Minha Vida)"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU",
+            "nota": "fiscalização de obras públicas e sobrepreço"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "A contra-leitura mais forte é que o \"meio bilhão em um contrato\" é um artefato de UNIDADE DE REGISTRO e de SELEÇÃO DA CAUDA, não uma anomalia de superfaturamento. Três mecanismos, todos apoiados nos próprios FATOS: (1) Denominador/unidade de análise. A média citada é ~R$1,5 mi/contrato (8,97 bi / 5.945), mas essa média mistura pequenos contratos de reforma com instrumentos únicos que empacotam conjuntos habitacionais inteiros. Programas federais tipo faixa MCMV ou reconstrução pós-desastre são frequentemente lançados no PNCP como UM contrato cobrindo centenas de unidades; dividir esse valor de escala-programa pela população minúscula do município produz um choque per capita ilusório — o custo por unidade habitacional pode estar perfeitamente na média. (2) Amostras n=1 e n=3. Olho d'Água das Flores é UM contrato e Barreirinha são TRÊS; selecionar o maior \"por_contrato_mi\" entre milhares de municípios é escolher deliberadamente a ponta da distribuição, onde outliers aparecem por acaso (comparações múltiplas). Extremos em amostras minúsculas não carregam significância estatística. (3) Ausência de sinal de sanção. Os FATOS mostram que só 209 dos 5.945 contratos (3,3%, R$295,6 mi) tocam empresa sancionada — e nada indica que os contratos gigantes de AL/AM estejam nesse conjunto. Sede jurídica municipal também pode ser o mero ponto de registro de um programa estadual/regional. Ou seja: a \"anomalia geográfica\" pode ser só a assinatura contábil de como o PNCP registra programas grandes, não desvio.",
+        "condicao": "Para a contra-leitura vencer, precisaria ser VERDADE que: (i) o contrato de R$535,8 mi de Olho d'Água das Flores (e os de Barreirinha) se resolva num programa habitacional federal/estadual legítimo e de grande porte — plausível dado que AL e AM tiveram enchentes/desastres com reconstrução massiva; (ii) o custo POR UNIDADE habitacional entregue fique em linha com os pares nacionais (normalização do ticket ao dividir pelo nº real de moradias, não pela população); (iii) haja entrega física verificável das unidades; e (iv) esses contratos NÃO estejam entre os 209 já marcados por vínculo com empresa sancionada. Se as quatro condições se sustentarem, o \"meio bilhão\" é artefato de registro, não bandeira vermelha. O teste decisivo é único: valor por unidade entregue + comprovação de entrega. Se o per-unidade normalizar, a contra vence; se permanecer múltiplas vezes acima dos pares, o sinal original sobrevive.",
+        "sintese": "O insight já se protege ao chamar isso de \"sinal e anomalia, não desvio provado\", e a contra não o derruba — ela o reordena: o valor por contrato muito acima da mediana é gatilho legítimo de priorização de auditoria justamente porque pode ser tanto programa regular de grande porte quanto concentração indevida, e só o custo-por-unidade-entregue distingue os dois. O que sobra de pé é que a magnitude merece checagem, mas a moldura correta é \"verificar a base de registro e o preço por moradia antes de tratar como suspeita\", não \"porte desproporcional = risco\"."
+      }
+    },
+    {
+      "titulo": "Volume não é concentração: os setores de conhecimento fecham mais o portão",
+      "leitura": "Os dois maiores potes — Construção (R$358,75 bi, conc5 5,81%) e Saúde (R$210,22 bi, 5,02%) — estão entre os menos concentrados, enquanto Tecnologia (R$96,42 bi, 20,49%) e Educação (R$35,16 bi, 19,95%) concentram 3 a 4x mais. Correções de honestidade: o piso real é o Comércio varejista (4,33%), e conc5 de 20% é sinal de fragilidade de mercado, não prova de captura ou cartel. Há componente parcialmente mecânico (menos empresas → conc5 maior), mas não explica tudo: Educação tem 19.613 empresas e ainda assim conc5 alto. Lição operacional: fiscalizar só os grandes volumes deixa intactos os nichos técnicos onde poucas empresas dominam.",
+      "persona": "O Analista de Redes",
+      "pensadores": [
+        "Scott Page",
+        "Charles Tilly"
+      ],
+      "numeros": [
+        "Construção R$358,75 bi, conc5 5,81% (34.415 empresas)",
+        "Saúde e farmácia R$210,22 bi, conc5 5,02% (46.607 empresas)",
+        "Tecnologia R$96,42 bi, conc5 20,49% (12.424 empresas)",
+        "Educação R$35,16 bi, conc5 19,95% (19.613 empresas)",
+        "Comércio varejista conc5 4,33%"
+      ],
+      "tema": "Concentração",
+      "forca": 3,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Scott Page",
+            "obra": "The Difference (2007)",
+            "conceito": "Diversidade cognitiva supera habilidade individual; homogeneidade (poucos players) fragiliza o sistema."
+          },
+          {
+            "autor": "Charles Tilly",
+            "obra": "Durable Inequality (1998); A Formação do Estado como Crime Organizado (1985)",
+            "conceito": "A desigualdade durável se reproduz por acaparamento de oportunidades entre categorias, não por mérito."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "CADE",
+            "nota": "defesa da concorrência e repressão a cartel em licitação"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "O conc5 (fatia dos 5 maiores) é medido como top-5 / total de empresas — e o próprio FATO mostra que os setores \"concentrados\" são justamente os de menor universo de fornecedores: Tecnologia tem só 12.424 empresas e Educação 19.613, contra 34.415 na Construção, 46.607 na Saúde e 93.237 no Varejo. Com poucas empresas no mercado, é MECÂNICO que os 5 maiores detenham fatia maior — o indicador está inflado pelo denominador pequeno, não por um \"portão fechado\". Pior: em reais absolutos a leitura se inverte. O top-5 da Construção captura 358,75 × 5,81% ≈ R$20,8 bi; o top-5 de Tecnologia, 96,42 × 20,49% ≈ R$19,8 bi; o da Saúde, R$10,6 bi. Ou seja, os 5 maiores da Construção movimentam MAIS dinheiro que os 5 maiores da Tecnologia, apesar do conc5 quatro vezes menor. \"Fiscalizar só grandes volumes deixa os nichos técnicos intactos\" ignora que, em valor efetivamente capturado pelas líderes, os grandes volumes ainda concentram mais recurso. E ticket alto + poucos fornecedores em TI/Educação pode refletir escassez legítima de prestadores qualificados (especialização real), não fragilidade convidativa a cartel.",
+        "condicao": "A contra-leitura vence se, ao normalizar a concentração pelo tamanho do mercado — regredindo conc5 sobre o log do número de empresas, ou trocando por um índice tipo Herfindahl — Tecnologia e Educação deixarem de se destacar e caírem sobre a curva esperada para setores com poucos fornecedores. O teste decisivo: (1) os 20% de conc5 têm de ser previstos apenas pelo universo reduzido de empresas, e (2) o valor absoluto capturado pelo top-5 dos nichos técnicos tem de ser comprovadamente menor e mais suscetível a conluio do que o dos setores de alto volume. Se ambos se confirmarem, conc5=20% é artefato estatístico, não sinal de gate.",
+        "sintese": "Fica de pé o alerta central: triagem por volume é cega à concentração, e esta merece lente própria. Mas conc5 sem descontar o tamanho do mercado confunde \"existem poucas empresas\" com \"o portão está fechado\", e em reais o top-5 da Construção captura mais que o da Tecnologia — logo a prioridade prática não se inverte de forma limpa. O honesto é usar concentração como bandeira complementar, medida líquida do número de fornecedores e sempre lida junto do valor absoluto em jogo."
+      }
+    },
+    {
+      "titulo": "conc5 baixa não é atestado de concorrência — é métrica ambígua",
+      "leitura": "O reflexo é ler conc5 baixa como mercado saudável, mas a fragmentação não distingue sozinha dois cenários opostos: concorrência real OU renda pulverizada entre muitas firmas locais. Num pote de R$359 bi com 34 mil fornecedores (conc5 0,0581), 'poucos dominam?' é a pergunta errada. E no sentido inverso, conc5 mais alta em Tech/Educação não prova captura — pode ser só a natureza técnica desses mercados. Hipótese teórica (Olson): uma coalizão distributiva ampla pode ser politicamente mais difícil de reformar que um cartel visível, por diluir o interesse entre muitos stakeholders.",
+      "persona": "A Institucionalista",
+      "pensadores": [
+        "Mancur Olson",
+        "Douglass North"
+      ],
+      "numeros": [
+        "Construção R$358,75 bi, conc5 0,0581, 34.415 empresas, ticket R$2,1 mi",
+        "Tecnologia conc5 0,2049",
+        "Educação conc5 0,1995"
+      ],
+      "tema": "Concentração",
+      "forca": 3,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Mancur Olson",
+            "obra": "A Lógica da Ação Coletiva (1965); Ascensão e Declínio das Nações (1982)",
+            "conceito": "Grupos pequenos e organizados capturam benefícios concentrados às custas de uma maioria difusa (coalizões distributivas)."
+          },
+          {
+            "autor": "Douglass North",
+            "obra": "Instituições, Mudança Institucional e Desempenho Econômico (1990)",
+            "conceito": "Instituições são as regras do jogo E sua execução; elas moldam a estrutura de incentivos da economia."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "CADE",
+            "nota": "defesa da concorrência e repressão a cartel em licitação"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "A leitura trata conc5 como se fosse ruído semântico (\"pergunta errada\"), mas os próprios FATOS mostram que ela varia de forma estruturada e informativa, não aleatória. O conc5 acompanha traços objetivos do mercado: Comércio varejista tem 93.237 firmas, ticket de R$0,1 mi e conc5 de 4,3% (mercado de commodity genuinamente atomizado); Tecnologia tem 12.424 firmas, ticket de R$1 mi e conc5 de 20,5%; Educação, 19.613 firmas e conc5 de 20,0%. Essa correlação inversa entre nº de fornecedores/ticket e conc5 é exatamente o que se esperaria se a métrica capturasse algo real da estrutura de oferta — logo, descartá-la como ambígua joga fora um sinal barato de triagem. Além disso, para COMPRA PÚBLICA a distinção 'concorrência real vs. renda pulverizada' importa menos do que o insight sugere: mesmo que os R$359 bi da Construção sejam renda distribuída entre milhares de firmas locais sem disputa efetiva, um conc5 de 5,8% ainda significa que nenhum fornecedor isolado captura o pote — que é precisamente o risco de captura que conc5 foi feito para medir. E os FATOS corroboram a fragmentação como fenômeno real, não artefato: a família de rombo 'Concentração de mercado' soma apenas R$0,18 bi em toda a base, o valor mais baixo entre as seis famílias — consistente com a leitura de que concentração agregada não é o vetor dominante de exposição.",
+        "condicao": "A contra-leitura vence se conc5 (comparado DENTRO do setor, não entre potes de natureza diferente) correlacionar com sinais independentes de captura. O teste decisivo: cruzar conc5 com as taxas de rombo (sancionado 3,28%, dispensa 0,66%, fracionamento 0,04%) por setor. Se recortes com conc5 alto exibirem taxas sistematicamente piores de empresa punida recebendo, dispensa ou fatiamento do que recortes com conc5 baixo, então a métrica rastreia captura real e a ambiguidade alegada some. Se, ao contrário, Tecnologia/Educação (conc5 ~0,20) não mostrarem sancionado/dispensa/fracionamento pior que Varejo (conc5 0,04), conc5 é ortogonal à captura e o insight se sustenta.",
+        "sintese": "Sobra em pé que conc5 é sinal fraco, não nulo: inútil como veredito absoluto ('poucos dominam?' de fato não se responde num pote de 34 mil firmas), mas informativo como flag relativa intra-setor, já que varia de modo estruturado com ticket e nº de fornecedores. O insight acerta ao negar que conc5 baixa ateste concorrência; erra se disso concluir que a métrica não diz nada — ela ainda mede quem NÃO captura o pote, e só perde valor quando usada isolada e entre setores incomparáveis."
+      }
+    },
+    {
+      "titulo": "O pior caso se alarga no ano da eleição municipal: cenário agravado abre +40% em 2028",
+      "leitura": "No cenário central, o risco projetado sobe de R$32,46 bi (2026, federal) para R$35,79 bi (2028, municipal). O sinal mais forte está na abertura do cenário agravado: +20% sobre o central em 2026, mas +40% em 2028 — a cauda pessimista se alarga justamente no ano em que obra e habitação se decidem no território concreto (Soja, Harvey). Ressalva dura: são projeções de exposição total (não fraude, não recorte setorial), e com dois pontos não se prova ciclo eleitoral nem se separa efeito-eleição de mera tendência de alta. É hipótese a testar, não achado.",
+      "persona": "O Geógrafo do Capital",
+      "pensadores": [
+        "Edward Soja",
+        "David Harvey"
+      ],
+      "numeros": [
+        "Projeção 2026 (federal): central R$32,46 bi / agravado R$38,95 bi",
+        "Projeção 2028 (municipal): central R$35,79 bi / agravado R$50,10 bi",
+        "exposição total a risco R$64,18 bi (taxa 4,01%)"
+      ],
+      "tema": "Eleições",
+      "forca": 3,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Edward Soja",
+            "obra": "Em Busca da Justiça Espacial (2010); Geografias Pós-Modernas (1989)",
+            "conceito": "A injustiça não ocorre apenas NO espaço — é PRODUZIDA pela forma como o espaço é organizado."
+          },
+          {
+            "autor": "David Harvey",
+            "obra": "O Direito à Cidade (2012); A Justiça Social e a Cidade (1973)",
+            "conceito": "O capital excedente transborda para o ambiente construído (circuito secundário) em busca de um spatial fix."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Decisão",
+            "ref": "ADI 4650 (STF, 2015)",
+            "nota": "fim da doação empresarial a campanhas e partidos"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 13.165/2015 (minirreforma eleitoral)",
+            "nota": "consolidou a proibição da doação de pessoa jurídica"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 13.487/2017",
+            "nota": "criou o Fundo Especial de Financiamento de Campanha (FEFC)"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TSE — dados abertos",
+            "nota": "prestação de contas eleitorais, fonte das doações"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "A leitura sugere um \"efeito-eleição que acelera\" (agravado abrindo +20% em 2026 e +40% em 2028), mas os próprios FATOS mostram que isso é quase inteiramente um artefato de construção, não um sinal empírico. Três problemas: (1) Só existem dois pontos (2026 federal, 2028 municipal) e ambos são PROJEÇÕES, não medições — o \"central\" já sobe monotonicamente (32,46 -> 35,79 bi, +10%) e o \"agravado\" é um cenário parametrizado à mão; o +40% vs +20% descreve a régua do multiplicador agravado, não um fato observado. (2) A exposição total (64,18 bi) é dominada em 82% por uma única família — \"empresa punida ainda recebendo\" (52,52 bi) — que reflete casamento com cadastro de sanções, um mecanismo administrativo sem relação óbvia com calendário eleitoral; projetar isso à frente basicamente reescala essa família. (3) Confusão de denominador: anos municipais concentram MUITO mais contratos pequenos e pulverizados (vide os sinais em municípios minúsculos como Barreirinha/AM e Olho d'Água das Flores/AL, com poucos contratos e valores por contrato altíssimos), com pior qualidade de dado e cobertura PNCP crescente no tempo — mais volume e mais ruído inflam a exposição em NÍVEL sem que a TAXA (4,01%) suba. Ou seja: \"alarga no ano municipal\" pode ser só \"2028 tem mais gasto, mais contratos e melhor cobertura\", com o efeito-eleição inexistente ou confundido com tendência.",
+        "condicao": "A contra-leitura vence se, ao normalizar, o \"alargamento\" sumir. Teste decisivo: (a) derivar o multiplicador agravado dos dados (não fixá-lo por suposição) e verificar se o +40% persiste — se ele vem da parametrização, cai; (b) expressar exposição como TAXA (bi projetado / total contratado projetado) por período em vez de nível — se a taxa for plana (~4%) e o salto de 2028 apenas acompanhar o crescimento do volume contratado e da cobertura PNCP, não há efeito-eleição; (c) placebo temporal: anos NÃO eleitorais e a série da família dominante (punida-recebendo) não podem mostrar o mesmo alargamento — se mostrarem, é tendência, não ciclo. Se as três passarem (taxa sobe além do volume, multiplicador ancorado em dado, placebo limpo), aí sim sobra sinal de eleição.",
+        "sintese": "De pé fica pouco além do que o próprio insight já admite: os níveis projetados são grandes e reais e vigiar 2028 é prudente, mas a tese de um efeito-eleição que ACELERA não se sustenta em dois pontos de cenário dominados por uma única família administrativa e por denominador crescente. O mais honesto é ler o +40% como artefato do agravado somado a mais contratos/mais cobertura em ano municipal — não como evidência de ciclo eleitoral."
+      }
+    },
+    {
+      "titulo": "Doação simbólica ao lado de contrato milionário: sinal para priorizar, não prova de pedágio",
+      "leitura": "MAXXI VIX doou R$600 e recebeu R$14,4 mi; a Gráfica J. Andrade, R$504 e R$2,4 mi; o Facebook, R$92.958 e R$9,2 mi. Cuidado com o número que dramatiza: os 23.997x da MAXXI VIX vêm sobretudo do denominador de R$600 — é artefato aritmético, não termômetro de 'pureza da renda'. O argumento até se morde: R$600 é pequeno demais para ter comprado R$14,4 mi, o que enfraquece a tese de quid pro quo. A leitura honesta é modesta: a razão contrato/doação serve para priorizar quais doadores-fornecedores olhar de perto (98 empresas, 24,2x médio), não para carimbar 'renda de acesso' num CNPJ nomeado.",
+      "persona": "A Economista do Valor",
+      "pensadores": [
+        "Thomas Piketty",
+        "Mariana Mazzucato"
+      ],
+      "numeros": [
+        "MAXXI VIX: doou R$600, recebeu R$14,4 mi, alav 23.997,6x",
+        "FACEBOOK: doou R$92.958, recebeu R$9,2 mi, alav 99,3x",
+        "GRÁFICA J. ANDRADE: doou R$504, recebeu R$2,4 mi, alav 4.693,4x",
+        "alavancagem_media 24,2x"
+      ],
+      "tema": "Rentismo",
+      "forca": 2,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Thomas Piketty",
+            "obra": "O Capital no Século XXI (2013)",
+            "conceito": "Quando o retorno do capital (r) supera o crescimento (g), a renda de patrimônio se concentra — rentismo."
+          },
+          {
+            "autor": "Mariana Mazzucato",
+            "obra": "O Estado Empreendedor (2013)",
+            "conceito": "O Estado socializa o risco e cria valor; o desafio é separar criação de valor de extração de renda."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Decisão",
+            "ref": "ADI 4650 (STF, 2015)",
+            "nota": "declarou inconstitucional a doação de empresas a campanhas"
+          },
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TSE e TCU",
+            "nota": "prestação de contas eleitoral e fiscalização dos contratos"
+          }
+        ]
+      },
+      "contra_leitura": {
+        "contra": "A leitura comete um erro de categoria: trata o valor da doação como se fosse o \"preço\" do contrato, quando renda de acesso não opera por proporcionalidade. O tamanho de uma doação não é o que ela compra — é o que ela sinaliza. R$600 podem ser o marcador contábil de uma relação preexistente, não a \"compra\" de R$14,4 mi. Sob esse modelo, uma doação simbólica ao lado de captura milionária é MAIS anômala, não menos: compare com FACEBOOK, que doou R$92.958 e recebeu R$9,2 mi (alavancagem de apenas 99,3x). O grande doador visível tem alavancagem baixa; a firma que capta milhões sobre um gesto simbólico é justamente a que menos \"paga pelo que recebe\" via canal declarado — o que pode indicar que o vínculo real corre por fora dos R$600 registrados, sendo a doação apenas o rastro em papel. Além disso, chamar de \"artefato aritmético\" isolado ignora que o padrão se repete no agregado: as 98 empresas ligadas doaram R$2,09 mi e receberam R$50,7 mi, alavancagem média de 24,2x. Ou seja, doações pequenas acompanham recebimentos grandes em toda a amostra — não é um outlier do denominador, é a assinatura do subconjunto selecionado como \"ligações\".",
+        "condicao": "Para a contra-leitura vencer, precisaria ser verdade que o mecanismo de influência independe da magnitude dos R$600 declarados E que os contratos de R$14,4 mi da MAXXI VIX mostrem anomalia processual (dispensa, sancionado, baixa competição ou direcionamento) ligada ao mesmo órgão/esfera do beneficiário da doação. Teste decisivo: rastrear se os contratos foram adjudicados por órgão conectado ao donatário e se foram competitivos ou dispensa/direcionados. Se forem certames abertos, dispersos geograficamente e anteriores à doação, o insight (mero artefato) se sustenta; se clusterizarem na esfera do donatário com procedimento pouco competitivo, a contra prevalece.",
+        "sintese": "Os dois lados concordam que os 23.997x são dominados pelo denominador e não provam nada sozinhos — o número é régua ruim, mas lanterna decente. O que sobra de pé é o núcleo do insight (\"priorizar, não carimbar\"), que a contra não derruba e sim afia: a pequenez da doação não é nem álibi nem prova; o que decide é o elo processual entre donatário e órgão contratante, que o dado atual não resolve. MAXXI VIX permanece prioridade de auditoria, não veredito."
+      }
+    },
+    {
+      "titulo": "96% dos alertas são 'graves' — e um rótulo que se aplica a quase tudo não prioriza nada",
+      "leitura": "106.396 dos 110.542 alertas são de severidade alta: 96,2%. Sobram 4.146 casos (3,75%) fora do topo. Um rótulo que cobre 96% do conjunto tem, por construção, poder de discriminação quase nulo — ele não separa o que merece olhar humano do que é ruído, porque 'alta' virou a regra, não a exceção. A leitura correta não é 'há 106 mil emergências', e sim 'a régua de severidade não está priorizando'. É negligência de taxa-base aplicada ao próprio sistema de triagem: sem denominador de referência e sem saber quantos níveis a escala tem, 106.396 fabrica urgência sem fabricar priorização. Ressalva honesta: não vemos a taxonomia de severidade, então o dado mostra que 'alta' não separa — não prova, por si, que a régua esteja mal calibrada; pode ser escala binária mal desenhada ou critério legítimo que realmente pega quase tudo. De todo modo, exposição não é fraude e volume de etiqueta não é volume de problema: o valor de um rótulo está no que ele deixa de fora, e este deixa de fora quase nada.",
+      "persona": "O Cognitivo",
+      "pensadores": [
+        "Daniel Kahneman",
+        "Amos Tversky"
+      ],
+      "numeros": [
+        "110542",
+        "106396",
+        "total_alertas",
+        "severidade_alta"
+      ],
+      "tema": "Sistema",
+      "forca": 4,
+      "novo": true,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Daniel Kahneman",
+            "obra": "Rápido e Devagar: Duas Formas de Pensar (2011)",
+            "conceito": "Dois sistemas de pensamento; vieses sistemáticos distorcem o julgamento sob incerteza."
+          },
+          {
+            "autor": "Amos Tversky",
+            "obra": "Julgamento sob Incerteza: Heurísticas e Vieses (1974)",
+            "conceito": "Ancoragem, disponibilidade e representatividade enviesam estimativas — a intuição erra de forma previsível."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU e CGU",
+            "nota": "controle externo e interno, auditoria baseada em risco"
+          }
+        ]
+      }
+    },
+    {
+      "titulo": "O ranking de alavancagem premia a doação minúscula — mas os 24,2 da 'média' são a razão agregada robusta, não vítima do mesmo defeito",
+      "leitura": "A alavancagem individual é recebido/doado — na prática, o retorno sobre a doação. Ordenar por ela faz o topo ser ocupado por quem doou menos, não por quem recebeu mais: MAXXI VIX doou R$600 e cravou alav 23.997,6; FACEBOOK doou R$92.958 e ficou em 99,3 — mesmo tendo contratos da mesma ordem (14,4 mi contra 9,2 mi). O abismo de ~240x é denominador, não numerador, e o '24 mil' captura a atenção por ser extremo, não por ser substantivo. Até aqui a crítica é justa. Mas ela tropeça ao dizer que a média de 24,2 herda o defeito: essa média não é a média das razões individuais — é a razão agregada, recebido total (50,7 mi) sobre doado total (2,09 mi), que dá exatamente 24,2. Por ser ponderada pelo volume doado, o R$92.958 da FACEBOOK domina o denominador e o R$600 da MAXXI vira ruído — o oposto de 'dominada por denominador ínfimo'. O 24,2 é, na verdade, o número honesto; quem engana é o ranking individual. E há um segundo cuidado: doação minúscula puxando contrato enorme não é automaticamente artefato — pode ser o caso mais interessante — mas a razão não prova nada sobre o contrato. É motivo para abrir o dado, não para concluir.",
+      "persona": "O Cognitivo",
+      "pensadores": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "numeros": [
+        "23997.6",
+        "99.3",
+        "14.4",
+        "9.2",
+        "600",
+        "92958",
+        "24.2"
+      ],
+      "tema": "Redes",
+      "forca": 4,
+      "novo": true,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Amos Tversky",
+            "obra": "Julgamento sob Incerteza: Heurísticas e Vieses (1974)",
+            "conceito": "Ancoragem, disponibilidade e representatividade enviesam estimativas — a intuição erra de forma previsível."
+          },
+          {
+            "autor": "Daniel Kahneman",
+            "obra": "Rápido e Devagar: Duas Formas de Pensar (2011)",
+            "conceito": "Dois sistemas de pensamento; vieses sistemáticos distorcem o julgamento sob incerteza."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "CADE",
+            "nota": "cartel e conluio entre fornecedores"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU e CGU",
+            "nota": "controle externo e interno, auditoria baseada em risco"
+          }
+        ]
+      }
+    },
+    {
+      "titulo": "'Valor por contrato' com n=1 não descreve o município, descreve um contrato",
+      "leitura": "Os FATOS trazem um campo 'valor por contrato' para os municípios-sinal de habitação, mas ele é calculado sobre amostras minúsculas: Olho d'Água das Flores (AL) marca 535,8 mi por contrato a partir de UM único contrato; Olivença (AL), 137,1 mi de dois; Barreirinha (AM), 193,6 mi de três. Com n=1 a média e o valor observado são a mesma coisa — não há tendência a estimar, só um contrato reproduzido. Repare que a própria lista dos FATOS está ordenada pelo valor total (Barreirinha, 580,8 mi, vem primeiro), e não pelo por-contrato: é só ao trocar o critério para 'por contrato' que o caso de n=1 salta para o topo, um artefato de dividir um número grande por um denominador pequeno. Meio bilhão num município minúsculo é uma imagem vívida que puxa a atenção, mas a raridade estatística (pouquíssimos contratos) é justamente o que torna o número instável. O 'por contrato' aqui serve para priorizar a conferência daquele contrato específico — não para caracterizar o lugar.",
+      "persona": "O Cognitivo",
+      "pensadores": [
+        "Amos Tversky",
+        "Daniel Kahneman"
+      ],
+      "numeros": [
+        "535.8",
+        "193.6",
+        "137.1",
+        "1",
+        "2",
+        "3"
+      ],
+      "tema": "Território",
+      "forca": 3,
+      "novo": true,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "Amos Tversky",
+            "obra": "Julgamento sob Incerteza: Heurísticas e Vieses (1974)",
+            "conceito": "Ancoragem, disponibilidade e representatividade enviesam estimativas — a intuição erra de forma previsível."
+          },
+          {
+            "autor": "Daniel Kahneman",
+            "obra": "Rápido e Devagar: Duas Formas de Pensar (2011)",
+            "conceito": "Dois sistemas de pensamento; vieses sistemáticos distorcem o julgamento sob incerteza."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "Ministério das Cidades",
+            "nota": "política habitacional federal (ex.: Minha Casa Minha Vida)"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU",
+            "nota": "fiscalização de obras públicas e sobrepreço"
+          }
+        ]
+      }
+    },
+    {
+      "titulo": "Meio bilhão num único contrato de habitação numa cidade de Alagoas: a plataforma torna o valor legível, mas legível não é fiscalizado",
+      "leitura": "Habitação move R$8,97 bi em 5.945 contratos, e os três municípios sinalizados concentram valores por contrato fora de qualquer escala: Olho d'Água das Flores (AL) com R$535,8 mi num único contrato, Barreirinha (AM) a R$193,6 mi por contrato (3 contratos, R$580,8 mi) e Olivença (AL) a R$137,1 mi (2 contratos). Vale ser honesto sobre o que o dado é: esses municípios aparecem porque foram JUSTAMENTE filtrados pelo valor-por-contrato anômalo — são 'sinal', não prova de irregularidade, e o próprio recorte já os seleciona pelos extremos. O que o PNCP entrega é legibilidade: o centro passa a enxergar o número. Mas ler não é fiscalizar, e é aí que Scott ajuda como HIPÓTESE, não como conclusão: a legibilidade é um vetor que desce da capital, e nada nos FATOS mede se a controladoria local, a câmara ou a imprensa desses municípios têm densidade para contestar meio bilhão de reais. A afirmação forte — 'o contrato pousa lá PORQUE ali ninguém lê' — extrapola: os dados mostram a assimetria de valor, não a de capacidade de resposta. O que fica sustentado, e já basta: um contrato único de R$535,8 mi de habitação num pequeno município é um ponto que pede auditoria dirigida, exatamente o tipo de anomalia que a plataforma torna visível e que a fiscalização local raramente teria como puxar sozinha.",
+      "persona": "O Cartógrafo do Estado",
+      "pensadores": [
+        "James C. Scott",
+        "Bruno Latour"
+      ],
+      "numeros": [
+        "8.97",
+        "193.6",
+        "535.8",
+        "137.1"
+      ],
+      "tema": "Território",
+      "forca": 3,
+      "novo": true,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "James C. Scott",
+            "obra": "Vendo como um Estado (1998)",
+            "conceito": "A legibilidade que o Estado impõe simplifica e cega; o que não é mensurável escapa ao seu olhar."
+          },
+          {
+            "autor": "Bruno Latour",
+            "obra": "Reagregando o Social (2005)",
+            "conceito": "Teoria ator-rede: seguir os atores e as mediações que a rede torna invisíveis."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "Ministério das Cidades",
+            "nota": "política habitacional federal (ex.: Minha Casa Minha Vida)"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU",
+            "nota": "fiscalização de obras públicas e sobrepreço"
+          }
+        ]
+      }
+    },
+    {
+      "titulo": "A fronteira da legibilidade não separa honesto de fraudulento — separa o que a lei manda ver do que ela mesma isenta",
+      "leitura": "Dois vazamentos-gêmeos, mesma consequência (nada passa pela concorrência), estatutos opostos. Dispensa — compra sem licitação — soma R$10,5 bi a uma taxa de 0,66%: invisibilidade LEGAL, o Estado legislou sua própria não-competição. Fracionamento — fatiar para cair sob o limiar — soma R$0,63 bi a 0,04%: invisibilidade ILEGAL por definição da categoria. Juntos, R$11,13 bi nunca passaram sob a luz concorrencial. O dado revelador é a assimetria: a dispensa pesa 16x mais que o fracionamento. A leitura ingênua diria que quase toda a evasão da concorrência é burla; a leitura honesta diz o contrário — entre esses dois gêmeos, a maior fatia não é burlada, é dispensada por norma. E a taxa de 0,04% do fracionamento não mede pouca fraude: mede o piso de resolução do registro. O que é desenhado para ficar abaixo do limiar só reaparece por reconstrução forense, não por registro direto — então esses R$0,63 bi são o que sobrou visível de uma sombra, não o total dela. Latour: o instrumento define o fenômeno. O aparato vê a exceção legal como linha; a evasão ilegal, como borrão. Ambos os valores são exposições calculadas, não fraude julgada — mas a lição de política independe disso: regular o limiar sem regular a dispensa é iluminar a fresta e deixar a porta escancarada.",
+      "persona": "O Cartógrafo do Estado",
+      "pensadores": [
+        "James C. Scott",
+        "Bruno Latour"
+      ],
+      "numeros": [
+        "10.5",
+        "0.0066",
+        "0.63",
+        "0.0004"
+      ],
+      "tema": "Sistema",
+      "forca": 4,
+      "novo": true,
+      "referencias": {
+        "obras": [
+          {
+            "autor": "James C. Scott",
+            "obra": "Vendo como um Estado (1998)",
+            "conceito": "A legibilidade que o Estado impõe simplifica e cega; o que não é mensurável escapa ao seu olhar."
+          },
+          {
+            "autor": "Bruno Latour",
+            "obra": "Reagregando o Social (2005)",
+            "conceito": "Teoria ator-rede: seguir os atores e as mediações que a rede torna invisíveis."
+          }
+        ],
+        "ancoras": [
+          {
+            "tipo": "Lei",
+            "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+            "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+          },
+          {
+            "tipo": "Órgão",
+            "ref": "TCU e CGU",
+            "nota": "controle externo e interno, auditoria baseada em risco"
+          }
+        ]
+      }
+    }
+  ],
+  "personas": [
+    {
+      "id": "institucionalista",
+      "nome": "A Institucionalista",
+      "pensadores": [
+        "Daron Acemoglu",
+        "Douglass North",
+        "Mancur Olson"
+      ],
+      "mandato": "Instituições extrativas x inclusivas; coalizões distributivas; captura do Estado por grupos organizados. Pergunta: as regras concentram ou distribuem? Quem captura a renda pública?"
+    },
+    {
+      "id": "criminologo",
+      "nome": "O Criminólogo do Colarinho",
+      "pensadores": [
+        "Edwin Sutherland",
+        "Robert Merton",
+        "Cesare Beccaria"
+      ],
+      "mandato": "Crime de colarinho branco (respeitabilidade + oportunidade); anomia/tensão estrutural; dissuasão (certeza da punição). Sempre trata alerta como exposição/sinal, nunca como fraude provada."
+    },
+    {
+      "id": "geografo",
+      "nome": "O Geógrafo do Capital",
+      "pensadores": [
+        "David Harvey",
+        "Doreen Massey",
+        "Edward Soja"
+      ],
+      "mandato": "Circuito secundário do capital (o dinheiro migra para o imobiliário/construído); spatial fix; geometria do poder; (in)justiça espacial. Para onde no território vai o dinheiro?"
+    },
+    {
+      "id": "redes",
+      "nome": "O Analista de Redes",
+      "pensadores": [
+        "Mark Granovetter",
+        "Scott Page",
+        "Charles Tilly"
+      ],
+      "mandato": "Imbricamento da economia nas relações sociais; laços fracos/fortes; hubs; desigualdade durável reproduzida por redes. Onde estão os hubs que concentram muito?"
+    },
+    {
+      "id": "valor",
+      "nome": "A Economista do Valor",
+      "pensadores": [
+        "Mariana Mazzucato",
+        "Thomas Piketty"
+      ],
+      "mandato": "Criação x extração de valor; capital e renda (r>g); rentismo. Quais setores criam valor e quais extraem renda? A alavancagem é extração pura?"
+    }
+  ],
+  "contagem": {
+    "brutos": 20,
+    "sustentados": 17,
+    "finais": 8,
+    "novos": 5,
+    "contra_leituras": 8
+  },
+  "referencias_gerais": {
+    "bibliografia": [
+      {
+        "autor": "Amos Tversky",
+        "obra": "Julgamento sob Incerteza: Heurísticas e Vieses (1974)",
+        "conceito": "Ancoragem, disponibilidade e representatividade enviesam estimativas — a intuição erra de forma previsível."
+      },
+      {
+        "autor": "Bruno Latour",
+        "obra": "Reagregando o Social (2005)",
+        "conceito": "Teoria ator-rede: seguir os atores e as mediações que a rede torna invisíveis."
+      },
+      {
+        "autor": "Cesare Beccaria",
+        "obra": "Dos Delitos e das Penas (1764)",
+        "conceito": "A prevenção do crime vem da CERTEZA e da prontidão da punição, não de sua severidade."
+      },
+      {
+        "autor": "Charles Tilly",
+        "obra": "Durable Inequality (1998); A Formação do Estado como Crime Organizado (1985)",
+        "conceito": "A desigualdade durável se reproduz por acaparamento de oportunidades entre categorias, não por mérito."
+      },
+      {
+        "autor": "Daniel Kahneman",
+        "obra": "Rápido e Devagar: Duas Formas de Pensar (2011)",
+        "conceito": "Dois sistemas de pensamento; vieses sistemáticos distorcem o julgamento sob incerteza."
+      },
+      {
+        "autor": "David Harvey",
+        "obra": "O Direito à Cidade (2012); A Justiça Social e a Cidade (1973)",
+        "conceito": "O capital excedente transborda para o ambiente construído (circuito secundário) em busca de um spatial fix."
+      },
+      {
+        "autor": "Doreen Massey",
+        "obra": "Pelo Espaço (2005); Espaço, Lugar e Gênero (1994)",
+        "conceito": "O espaço é uma geometria de poder: alguns comandam os fluxos, outros apenas os recebem."
+      },
+      {
+        "autor": "Douglass North",
+        "obra": "Instituições, Mudança Institucional e Desempenho Econômico (1990)",
+        "conceito": "Instituições são as regras do jogo E sua execução; elas moldam a estrutura de incentivos da economia."
+      },
+      {
+        "autor": "Edward Soja",
+        "obra": "Em Busca da Justiça Espacial (2010); Geografias Pós-Modernas (1989)",
+        "conceito": "A injustiça não ocorre apenas NO espaço — é PRODUZIDA pela forma como o espaço é organizado."
+      },
+      {
+        "autor": "Edwin Sutherland",
+        "obra": "O Crime do Colarinho Branco (1949)",
+        "conceito": "Crime cometido por pessoas de respeitabilidade no exercício da ocupação — invisível ao estereótipo do criminoso."
+      },
+      {
+        "autor": "James C. Scott",
+        "obra": "Vendo como um Estado (1998)",
+        "conceito": "A legibilidade que o Estado impõe simplifica e cega; o que não é mensurável escapa ao seu olhar."
+      },
+      {
+        "autor": "Mancur Olson",
+        "obra": "A Lógica da Ação Coletiva (1965); Ascensão e Declínio das Nações (1982)",
+        "conceito": "Grupos pequenos e organizados capturam benefícios concentrados às custas de uma maioria difusa (coalizões distributivas)."
+      },
+      {
+        "autor": "Mariana Mazzucato",
+        "obra": "O Estado Empreendedor (2013)",
+        "conceito": "O Estado socializa o risco e cria valor; o desafio é separar criação de valor de extração de renda."
+      },
+      {
+        "autor": "Mark Granovetter",
+        "obra": "The Strength of Weak Ties (1973)",
+        "conceito": "A ação econômica está imbricada (embedded) em redes de relações sociais, não em preços isolados."
+      },
+      {
+        "autor": "Scott Page",
+        "obra": "The Difference (2007)",
+        "conceito": "Diversidade cognitiva supera habilidade individual; homogeneidade (poucos players) fragiliza o sistema."
+      },
+      {
+        "autor": "Thomas Piketty",
+        "obra": "O Capital no Século XXI (2013)",
+        "conceito": "Quando o retorno do capital (r) supera o crescimento (g), a renda de patrimônio se concentra — rentismo."
+      }
+    ],
+    "arcabouco": [
+      {
+        "tipo": "Lei",
+        "ref": "Lei 14.133/2021 (Nova Lei de Licitações)",
+        "nota": "governança, gestão de riscos e ampla disputa nas contratações"
+      },
+      {
+        "tipo": "Órgão",
+        "ref": "CADE",
+        "nota": "cartel e conluio entre fornecedores"
+      },
+      {
+        "tipo": "Órgão",
+        "ref": "TCU e CGU",
+        "nota": "controle externo e interno, auditoria baseada em risco"
+      },
+      {
+        "tipo": "Órgão",
+        "ref": "Ministério das Cidades",
+        "nota": "política habitacional federal (ex.: Minha Casa Minha Vida)"
+      },
+      {
+        "tipo": "Órgão",
+        "ref": "TCU",
+        "nota": "fiscalização de obras públicas e sobrepreço"
+      },
+      {
+        "tipo": "Decisão",
+        "ref": "ADI 4650 (STF, 2015)",
+        "nota": "fim da doação empresarial a campanhas e partidos"
+      },
+      {
+        "tipo": "Lei",
+        "ref": "Lei 13.165/2015 (minirreforma eleitoral)",
+        "nota": "consolidou a proibição da doação de pessoa jurídica"
+      },
+      {
+        "tipo": "Lei",
+        "ref": "Lei 13.487/2017",
+        "nota": "criou o Fundo Especial de Financiamento de Campanha (FEFC)"
+      },
+      {
+        "tipo": "Órgão",
+        "ref": "TSE — dados abertos",
+        "nota": "prestação de contas eleitorais, fonte das doações"
+      },
+      {
+        "tipo": "Lei",
+        "ref": "Lei 14.133/2021, art. 156",
+        "nota": "gradua sanções e o impedimento de licitar/contratar da empresa punida"
+      },
+      {
+        "tipo": "Lei",
+        "ref": "Lei 12.846/2013 (Lei Anticorrupção)",
+        "nota": "responsabiliza a pessoa jurídica e alimenta o CNEP"
+      },
+      {
+        "tipo": "Cadastro",
+        "ref": "CEIS/CNEP — Portal da Transparência (CGU)",
+        "nota": "cadastros de empresas inidôneas e punidas cruzados nesta análise"
+      },
+      {
+        "tipo": "Órgão",
+        "ref": "TSE e TCU",
+        "nota": "prestação de contas eleitoral e fiscalização dos contratos"
+      }
+    ]
+  }
+}

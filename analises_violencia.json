@@ -1,0 +1,96 @@
+{
+  "gerado_em": "2026-07-17",
+  "grande_leitura": "Os dados de violência do Brasil contam três histórias que não devem ser somadas nem confundidas. A primeira é uma queda real da violência letal: os homicídios recuaram cerca de 11% entre 2021 (47.847) e 2024 (42.590), tendência robusta a qualquer ano-base. A segunda é que essa queda não é pacificação geral — o suicídio sobe na direção oposta (15.499 para 16.751), o trânsito ainda mata 38.253 por ano, e a mortalidade violenta somada permanece estruturalmente alta. A terceira é a mais escorregadia: as notificações do SINAN saltam ~39% (442.594 para 616.386, com 126.115 por parceiro íntimo em 2024), mas SINAN conta registro, não morte — a alta provavelmente mede, em boa parte, o próprio crescimento da vigilância sobre a violência não-letal, sobretudo doméstica, e não um aumento equivalente do fenômeno. Sobre quem morre, os fatos são nítidos: a letalidade seleciona um perfil (86% homens, 46,5% jovens de 15-29, 70,3% negros, 59,2% por arma de fogo). Mas aqui mora o principal limite: essas são proporções de uma amostra do SIM — descrevem a COMPOSIÇÃO de quem já morreu, não o RISCO de morrer, que só emergiria dividido pela base populacional que os dados não trazem. Falta, portanto, o essencial para fechar a conta: as taxas-base por grupo (para converter perfil em risco relativo), o recorte territorial (para testar se a cor da vítima é a cor da localização), a decomposição do suicídio por método (para saber se a política de armas alcança as duas curvas) e um denominador comum que permita ler SIM e SINAN como réguas complementares, não concorrentes. O que os dados sustentam com honestidade é modesto e ainda relevante: a morte violenta caiu, mas não se distribui ao acaso, e o país mede bem o corpo enquanto ainda enxerga mal o adoecimento que o antecede.",
+  "insights": [
+    {
+      "titulo": "O termômetro trocado: notificações do SINAN sobem ~39% enquanto a contagem de mortos cai ~11%",
+      "leitura": "As notificações de violência do SINAN vão de 442.594 (2022) a 616.386 (2024), +39%, enquanto os homicídios do SIM caem de 47.847 (2021) a 42.590 (2024), −11% — e a queda persiste mesmo alinhando as datas. Mas são réguas incomparáveis: o SIM conta óbitos, difíceis de inflar; o SINAN conta notificações de violência em boa parte não-letal, um ato administrativo que se multiplica quando se abrem postos e se cobra preenchimento. Se a violência letal estivesse explodindo, o número mais duro — os mortos — teria subido junto, e não caído. A leitura parcimoniosa é que boa parte do salto do SINAN mede o próprio crescimento do SINAN, não um crescimento equivalente da violência.",
+      "persona": "O Cognitivo",
+      "pensadores": ["Daniel Kahneman", "Amos Tversky"],
+      "numeros": ["SINAN 2022: 442.594", "SINAN 2024: 616.386", "homicidios 2021: 47.847", "homicidios 2024: 42.590"],
+      "tema": "Registro",
+      "forca": 5
+    },
+    {
+      "titulo": "70% descreve quem já morreu, não quem corre risco: é proporção lida ao contrário",
+      "leitura": "Os perfis vêm do SIM como proporções de uma amostra: 70,3% das vítimas negras/pardas/pretas, 86% homens, 46,5% jovens de 15-29, 59,2% por arma de fogo. Isso é P(traço | já foi vítima) — a composição de quem morreu, não a chance de morrer. Pela heurística da representatividade, o cérebro inverte silenciosamente e lê como 'ser negro é 70% de risco', trocando por P(vítima | traço). Sem a taxa-base populacional, a proporção não mede risco relativo: por si só ela aponta onde a estrutura concentra a letalidade, não 'grupos perigosos'.",
+      "persona": "O Cognitivo",
+      "pensadores": ["Daniel Kahneman", "Amos Tversky"],
+      "numeros": ["negros/pardos/pretos: 70,3%", "homens: 86%", "jovens 15-29: 46,5%", "arma de fogo: 59,2%"],
+      "tema": "Perfil",
+      "forca": 4
+    },
+    {
+      "titulo": "SINAN e SIM divergem de sinal — o iceberg da violência crônica abaixo da morte",
+      "leitura": "Dois sistemas caminham em sentidos opostos: as notificações do SINAN sobem forte (442.594 em 2022 para 616.386 em 2024) enquanto os homicídios do SIM caem (46.408 para 42.590). Sem denominador comum, esses dados não permitem separar se a alta do SINAN é mais cobertura, mais violência real ou as duas — o sinal do SINAN não confirma nem desmente a queda do SIM. Mas as 126.115 notificações por parceiro íntimo em 2024 apontam para uma camada de violência crônica que o homicídio nunca vê porque não mata. O diagnóstico honesto é a ambiguidade: a resposta pública mede bem o corpo e enxerga mal o adoecimento que o antecede.",
+      "persona": "O Sanitarista",
+      "pensadores": ["Edgar Morin", "Herbert Simon"],
+      "numeros": ["SINAN 2022: 442.594", "SINAN 2024: 616.386", "homicidios 2022: 46.408", "homicidios 2024: 42.590", "parceiro intimo 2024: 126.115"],
+      "tema": "Registro",
+      "forca": 4
+    },
+    {
+      "titulo": "A morte violenta tem endereço demográfico fixo — mas os dados mostram composição, não território",
+      "leitura": "Entre as mortes violentas do SIM, 70,3% são de pessoas negras/pardas/pretas, 86% homens e 46,5% jovens de 15-29 (proporções de 2023, amostra), com taxa nacional de 20,04 por 100 mil em 2024. Essa concentração é robusta demais para ser acaso: a morte recai sistematicamente sobre o mesmo perfil, sinal de uma desigualdade categórica durável em quem é exposto à violência letal. Mas os dados mostram COMPOSIÇÃO — quem morre — não LOCALIZAÇÃO nem causa: a hipótese de que a cor da vítima é a cor da localização é plausível e amparada na literatura, porém NÃO demonstrada aqui, pois falta cruzar as mortes com o mapa. Descrever essa estrutura não é dizer que jovens negros 'sejam' violentos; é registrar que são desproporcionalmente os mortos.",
+      "persona": "O Sociólogo do Território",
+      "pensadores": ["Charles Tilly", "Doreen Massey", "Edward Soja"],
+      "numeros": ["negros/pardos/pretos: 70,3%", "jovens 15-29: 46,5%", "homens: 86%", "taxa nacional: 20,04 por 100 mil (2024)"],
+      "tema": "Perfil",
+      "forca": 3
+    },
+    {
+      "titulo": "Curvas opostas: homicídio em queda, suicídio em alta — mas não é a mesma morte trocando de lugar",
+      "leitura": "Entre 2021 e 2024 os homicídios caíram de 47.847 para 42.590 (−11%) enquanto os suicídios subiram de 15.499 para 16.751 (+8%), ambos da mesma fonte de mortalidade. É correlação temporal, não deslocamento: a queda dos homicídios (−5.257) é cerca de quatro vezes maior que a alta dos suicídios (+1.252), então a imensa maioria da queda é redução real de mortes, não violência que virou para dentro. O que o dado sustenta é mais modesto: a 'queda' da violência letal não é pacificação geral, porque a mortalidade violenta somada segue alta em 2024. Dissuasão penal e saúde mental são problemas distintos, não vasos comunicantes.",
+      "persona": "O Criminólogo",
+      "pensadores": ["Robert Merton", "Cesare Beccaria"],
+      "numeros": ["homicidios 2021: 47.847", "homicidios 2024: 42.590", "suicidios 2021: 15.499", "suicidios 2024: 16.751", "transito 2024: 38.253"],
+      "tema": "Tendência",
+      "forca": 3
+    },
+    {
+      "titulo": "Arma de fogo é o meio dominante da letalidade — pista de política, não teorema",
+      "leitura": "O SIM aponta arma de fogo em 59,2% das mortes violentas (proporção de amostra) — não um fator entre muitos, mas o meio dominante que converte conflito em óbito, combinado ao perfil de vítimas jovens (46,5%), homens (86%) e negras (70,3%). Isso a torna candidata a ponto de alavancagem no homicídio: atacar a disponibilidade do meio, não só os motivos. Ressalva honesta: os FATOS não decompõem o suicídio (em alta) por método, e no Brasil o meio predominante do suicídio não é a arma — então NÃO se pode afirmar que a mesma medida corte as duas curvas. Mostrar que a arma é o meio majoritário não prova que reduzir sua densidade reduz a letalidade total: é agenda de pesquisa e política, não efeito causal medido.",
+      "persona": "O Sanitarista",
+      "pensadores": ["Herbert Simon", "Edgar Morin"],
+      "numeros": ["arma de fogo: 59,2%", "jovens 15-29: 46,5%", "homens: 86%", "negros: 70,3%", "homicidios 2024: 42.590"],
+      "tema": "Arma",
+      "forca": 3
+    },
+    {
+      "titulo": "A queda do homicídio não fecha a conta: o agregado de mortes evitáveis cai menos do que parece",
+      "leitura": "O homicídio recuou ~11% (47.847 em 2021 para 42.590 em 2024), uma queda real. Mas ler só essa linha superestima o ganho: no mesmo período o suicídio subiu (15.499 para 16.751) e o trânsito cai devagar (38.253 em 2024). Somando as três causas em 2024 — cerca de 97.594 óbitos — o agregado cai, porém MENOS do que o recuo do homicídio sozinho sugere, pois a alta do suicídio devolve cerca de um quarto do que o homicídio economizou. Não há dado ligando as mortes, então não afirmo transferência; o ponto é de agregação: tratar segurança, saúde mental e trânsito em silos faz o gestor comemorar um pedaço enquanto outra causa evitável sobe sem vigilância.",
+      "persona": "O Sanitarista",
+      "pensadores": ["Edgar Morin", "Herbert Simon"],
+      "numeros": ["homicidios 2021: 47.847", "homicidios 2024: 42.590", "suicidios 2021: 15.499", "suicidios 2024: 16.751", "transito 2024: 38.253"],
+      "tema": "Tendência",
+      "forca": 3
+    }
+  ],
+  "personas": [
+    {
+      "id": "criminologo",
+      "nome": "O Criminólogo",
+      "pensadores": ["Robert Merton", "Edwin Sutherland", "Cesare Beccaria"],
+      "mandato": "Anomia/tensão estrutural (meios x fins), associação diferencial (o crime se aprende no grupo) e dissuasão (certeza da pena). Por que o homicídio cai enquanto o suicídio sobe? O perfil é oportunidade estrutural?"
+    },
+    {
+      "id": "territorio",
+      "nome": "O Sociólogo do Território",
+      "pensadores": ["Doreen Massey", "Edward Soja", "Charles Tilly"],
+      "mandato": "Geometria do poder no espaço, (in)justiça espacial e violência coletiva durável. Quem morre não é aleatório no território; a violência é distribuída como um mapa de poder."
+    },
+    {
+      "id": "cognitivo",
+      "nome": "O Cognitivo",
+      "pensadores": ["Daniel Kahneman", "Amos Tversky"],
+      "mandato": "Vieses, taxa-base, artefatos de medição. A alta das notificações SINAN é mais violência ou mais registro? Comparar mortes (SIM) com notificações (SINAN) é comparar coisas diferentes? Onde o número engana?"
+    },
+    {
+      "id": "saude",
+      "nome": "O Sanitarista",
+      "pensadores": ["Herbert Simon", "Edgar Morin"],
+      "mandato": "Violência como fenômeno complexo e de saúde pública; racionalidade limitada da resposta. Homicídio + suicídio + trânsito são o mesmo sistema de mortes evitáveis? A arma de fogo é o ponto de alavancagem?"
+    }
+  ],
+  "contagem": { "brutos": 12, "sustentados": 11, "finais": 7 }
+}

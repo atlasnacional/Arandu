@@ -80,6 +80,73 @@ e as armadilhas que já custaram debugging real neste projeto.
   são por NOME normalizado ⇒ sempre indício, não prova.
 - Seja educado: `enriquecer-empresas` faz ~1 req/s. Não paralelize.
 
+## PNCP — o filtro de plausibilidade
+
+⚠️ Pegadinha que merece seção própria: o campo `valorGlobal` do PNCP **aceita
+valores corrompidos**. Existem contratos registrados com valores na casa dos
+trilhões — erro de digitação ou de unidade na origem. Um único desses domina
+qualquer ranking e envenena qualquer soma.
+
+Por isso todo cruzamento que envolve valor passa por `contrato_plausivel()`
+(`services/qualidade.py`), que hoje corta em **R$ 1 bi** por contrato. O corte está
+documentado no campo `filtro` de `cruzamentos.json` — quem contesta o número
+precisa saber que ele existe.
+
+## Banco Central — séries macroeconômicas (SGS)
+
+- Sistema Gerenciador de Séries Temporais do BCB. Alimenta o painel `/economia`
+  com 5 grupos: Trabalho, Crédito e endividamento, Dívida pública, Juros e
+  inflação, Câmbio.
+- Cada série carrega `unidade`, `origem`, `definicao` e o campo **`melhor`**, que
+  registra qual direção é a desejável — sem isso, uma alta de inadimplência e uma
+  alta de emprego seriam pintadas do mesmo jeito no gráfico.
+
+## SIAPE — inativos e pensões do Executivo federal
+
+- Alimenta `/pensoes`: 652.647 inativos, aposentadorias e pensões com valor,
+  tipo, órgão e data de início.
+- ⚠️ Cobre **apenas o Executivo federal** — não inclui Legislativo, Judiciário,
+  militares nem entes subnacionais. Qualquer leitura de "supersalários no Brasil"
+  a partir daqui é subcontagem.
+- O campo `acima_teto` compara com o teto constitucional vigente; benefícios
+  antigos podem ter amparo jurídico próprio (decisão judicial, direito adquirido)
+  — por isso é sinalizado, não acusado.
+
+## Censo 2022, FUNAI, INCRA, Fundação Palmares e CIMI
+
+- Alimentam `/indigenas` e `/quilombolas`.
+- O **Censo 2022** contou os quilombolas pela primeira vez (1,32 milhão) e
+  atualizou a demografia indígena por UF e etnia — a comparação com 2010 existe,
+  mas ⚠️ a **metodologia mudou** entre os dois censos; crescimento aqui mistura
+  aumento real com melhora de captação e reafirmação identitária.
+- Demarcação (FUNAI) e titulação quilombola (INCRA/Palmares) vêm por fase do
+  processo. O campo `anos_no_ritmo_atual` é uma projeção aritmética do ritmo
+  histórico, não uma previsão institucional.
+- Violência contra indígenas combina SIM/DataSUS com o relatório do **CIMI** —
+  fontes com metodologias diferentes, apresentadas lado a lado e não somadas.
+
+## SINAN — violência interpessoal e o recorte LGBTQIA+
+
+- Notificação compulsória de violência interpessoal/autoprovocada. Alimenta as
+  telas conjugais, incluindo o recorte por identidade de gênero e orientação
+  sexual.
+- ⚠️ **Subcontagem estrutural**: o SINAN registra o que chegou ao serviço de saúde
+  *e* foi notificado com o campo preenchido. Para população trans e LGB a
+  subnotificação é sabidamente maior. O painel publica isso em `nota_subcontagem`
+  em vez de apresentar o número como total.
+- O arquivo traz um glossário (`nomenclatura[]`) porque as categorias do formulário
+  não coincidem com os termos usados politicamente pelas próprias populações.
+
+## Receita Federal — dump completo de CNPJ (o Brasil dos negócios)
+
+- Além dos recortes de bares e templos (abaixo), o dump completo alimenta
+  `/economia-brasil`: **27,8 mi de empresas ativas** de 72,3 mi já registradas,
+  agrupadas em 28 setores e 41 atividades CNAE.
+- É o que torna possível a métrica de **penetração** — empresas existentes por
+  setor × empresas que efetivamente recebem dinheiro público.
+- ⚠️ A classificação usa o **CNAE principal**; empresa com atuação diversificada é
+  contada num setor só.
+
 ## IBGE e Querido Diário (ao vivo, sem armazenar)
 
 - Malha das UFs: `https://servicodados.ibge.gov.br/api/v3/malhas/...` (proxy em

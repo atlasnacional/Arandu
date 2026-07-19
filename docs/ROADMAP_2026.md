@@ -9,14 +9,26 @@ Plano estratégico de expansão de dados e melhoria do frontend com fundamento e
 ## 📋 Resumo Executivo
 
 ### O que você tem agora
-- ~13 fontes de dados públicas ✅
-- mais de 30 telas navegáveis no frontend ✅
+- ~20 fontes de dados públicas, todas sem token ✅
+- **51 telas** navegáveis em 8 seções ([inventário](telas.md)) ✅
 - Radar de fraude com 15 gatilhos ✅
-- Dashboard básico ✅
+- Camada de lastro e auditoria: proveniência por indicador, índice de confiança e recomputação das métricas publicadas ✅
 - **Já concluído** (era proposto aqui e hoje existe no código):
   - Importador IBGE — população (`backend/app/etl/ibge_populacao.py` + tabela `populacao_grupo`) ✅
   - Router de municípios (`backend/app/api/municipios.py`) ✅
   - Dashboard municipal consolidado (`frontend/src/pages/MunicipioDetalhe.tsx` na rota `/municipios/:codigo`) ✅
+  - Classificação de fornecedores por setor/atividade CNAE (`/setores`, `/atividades`) ✅
+  - Dossiê 360º por CNPJ — o "rastro do dinheiro" (`/rastro/:cnpj`) ✅
+  - Painel macroeconômico (BCB/SGS) e tecido empresarial do país (`/economia`, `/economia-brasil`) ✅
+  - Custo da política, inativos e supersalários, ciclo eleitoral municipal ✅
+  - Painéis de povos indígenas e quilombolas, e o funil da impunidade ✅
+  - Projeção de exposição a risco 2026/2028 (`/rombos`) ✅
+
+### Lacunas reconhecidas
+A tela `/proposta` publica o que a plataforma **não** cobre. A maior:
+**não existe dado aberto padronizado de nomeações** — cargos comissionados,
+dirigentes de estatais e agências, e quem os indicou. Sem isso, o mapa do poder
+fica parcial por limitação da fonte, não do projeto.
 
 ### O que pode adicionar
 - **Novas fontes de dados** ainda futuras (Portal Transparência execução, CGU convênios, SPU, TCU/TCE, etc)

@@ -29,14 +29,53 @@
 O padrão é sempre o mesmo: **ETL baixa → normaliza → grava no SQLite; os
 serviços cruzam as tabelas; a API expõe; o React desenha.**
 
-O app tem hoje **duas camadas**: a de **transparência/fraude** (parlamentares,
-licitações, fornecedores, radar de fraude) e a de **violência** — hoje o maior
-bloco, com ~20 telas em `frontend/src/pages/violencia/` (Panorama, Regiões,
-Juventude, Quem morre, Armas, Suicídio, Álcool, Bares, Mundo, Saúde mental,
-Conjugal, Gênero, etc.). A camada de violência é servida por **domínios
-modulares** em `backend/app/domains/` (`alcool`, `conjugal`, `mundo`,
-`diagnostico`, `regioes`), cada um com seu `router.py` e `etl.py`, registrados
-em `main.py`.
+O app tem hoje **três camadas**:
+
+1. **Transparência/fraude** — parlamentares, licitações, fornecedores, setores da
+   economia, doações, rastro por CNPJ, radar de fraude.
+2. **Violência** — o maior bloco, com ~25 telas em `frontend/src/pages/violencia/`
+   (Panorama, Regiões, Juventude, Quem morre, Armas, Suicídio, Álcool, Bares,
+   Mundo, Saúde mental, Conjugal, Gênero, Justiça, etc.), mais os painéis de
+   territórios indígenas e quilombolas. É servida por **domínios modulares** em
+   `backend/app/domains/` (`alcool`, `conjugal`, `mundo`, `diagnostico`,
+   `regioes`), cada um com seu `router.py` e `etl.py`, registrados em `main.py`.
+3. **Lastro e proveniência** — a camada que descreve as outras duas: catálogo de
+   fontes, chaves de cruzamento, ficha metodológica por indicador e a auditoria que
+   recomputa as métricas publicadas. Ver
+   [lastro-e-proveniencia.md](lastro-e-proveniencia.md).
+
+O inventário completo das telas está em [telas.md](telas.md).
+
+## O modo demonstração
+
+Este repositório publica a **build estática** — não há backend rodando. O front
+resolve isso convertendo cada endpoint da API num arquivo estático, trocando `/` por
+`_`:
+
+```js
+// frontend: resolvedor do modo demo
+`./demo/${endpoint.replace(/^\/api\//, "").replace(/[/]/g, "_")}.json`
+```
+
+Ou seja:
+
+| Endpoint | Arquivo no repositório |
+|---|---|
+| `/api/fornecedores/setores` | `demo/fornecedores_setores.json` |
+| `/api/fornecedores/setores/saude-e-farmacia` | `demo/fornecedores_setores_saude-e-farmacia.json` |
+| `/api/rastro/00000000000191` | `demo/rastro_00000000000191.json` |
+| `/api/lastro/fraude_projecao` | `demo/lastro_fraude_projecao.json` |
+
+Consequências práticas:
+
+- **Rotas paramétricas viram um arquivo por valor.** Hoje são 28 setores, 84 CNPJs
+  de rastro e 5 lastros congelados. Filtro ou busca que caia fora desse conjunto
+  não retorna nada no modo demo — é limitação esperada, não bug.
+- **Três arquivos ficam na raiz, não em `demo/`**: `apanhado_geral.json`,
+  `analises_personas.json` e `analises_violencia.json`. São carregados direto por
+  caminho (`./apanhado_geral.json`), fora do resolvedor acima.
+- Ao publicar uma tela nova, o snapshot precisa ser gerado junto — senão a rota
+  existe e a tela abre vazia.
 
 ## Tabelas principais (`backend/app/models.py`)
 

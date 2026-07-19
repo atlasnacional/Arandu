@@ -1,0 +1,78 @@
+{
+  "gerado_em": "2026-07-17",
+  "auditoria": {
+    "metricas": [
+      { "nome": "Base contratada (bi)", "recomputado": "1601.9", "publicado": "1601.9", "status": "OK" },
+      { "nome": "Cobertura da classificação por setor", "recomputado": "0,9761", "publicado": "0,9761", "status": "OK" },
+      { "nome": "Doações — total (bi)", "recomputado": "10.64", "publicado": "10.64", "status": "OK" },
+      { "nome": "Doações — fatia pública", "recomputado": "0,7769", "publicado": "0,7769", "status": "OK" },
+      { "nome": "Empresas que doaram e receberam", "recomputado": "98", "publicado": "98", "status": "OK" },
+      { "nome": "Alertas de risco — total", "recomputado": "110542", "publicado": "110542", "status": "OK" },
+      { "nome": "Exposição a risco — total (bi)", "recomputado": "64.18", "publicado": "64.18", "status": "OK" },
+      { "nome": "Alertas de severidade alta", "recomputado": "106396", "publicado": "106396", "status": "OK" },
+      { "nome": "Habitação — contratos", "recomputado": "5945", "publicado": "5945", "status": "OK" },
+      { "nome": "Habitação — total (bi)", "recomputado": "8.97", "publicado": "8.97", "status": "OK" }
+    ],
+    "divergencias": 0,
+    "tabelas": [
+      { "nome": "contratos", "linhas": 4468769 },
+      { "nome": "doacoes", "linhas": 2150088 },
+      { "nome": "empresa_setor", "linhas": 409739 },
+      { "nome": "alertas", "linhas": 110542 },
+      { "nome": "sancoes", "linhas": 24869 }
+    ]
+  },
+  "cadeia": [
+    { "passo": "Congresso fixa o Fundo Eleitoral", "descricao": "A cada ciclo, a lei orçamentária define o montante do Fundo Especial de Financiamento de Campanha (FEFC), dinheiro público que banca as campanhas.", "responsavel": "Congresso Nacional (fixa) · TSE (distribui)" },
+    { "passo": "Fundo → Diretório partidário → Candidato", "descricao": "O TSE repassa o fundo aos partidos; a direção partidária rateia entre candidatos. É a maior fonte de campanha hoje: R$ 8,27 bi (77,7%).", "responsavel": "TSE (prestação de contas eleitoral)" },
+    { "passo": "Candidato eleito assume o mandato", "descricao": "O eleito passa a influenciar — direta ou indiretamente — órgãos que contratam, por indicação, emenda ou gestão.", "responsavel": "TCU / CGU / controle interno do órgão" },
+    { "passo": "Órgão empenha, licita e contrata", "descricao": "O órgão reserva o recurso (empenho), abre a licitação e assina o contrato com o fornecedor no PNCP.", "responsavel": "TCU (federal) · Tribunais de Contas (TCE) · controle interno" },
+    { "passo": "Empenho → liquidação → pagamento", "descricao": "Reconhecida a entrega (liquidação), o Tesouro paga o fornecedor. É a saída efetiva do dinheiro público.", "responsavel": "Controle interno do órgão · Tesouro · TCU" },
+    { "passo": "O ciclo se fecha — e ninguém costura", "descricao": "Parte dos fornecedores (ou seus sócios) doou à campanha que ajudou a eleger quem decide o gasto. Fechar essa volta exige cruzar TSE × PNCP × CEIS/CNEP — o que nenhum órgão é obrigado a fazer.", "responsavel": "Competência fragmentada: TSE + TCU + CGU + MP" }
+  ],
+  "ligacoes": [
+    { "origem": "Congresso / Tesouro", "destino": "Fundo Eleitoral (FEFC)", "mecanismo": "A lei orçamentária fixa, a cada ciclo, o montante público que financia as campanhas.", "natureza": "explícita", "escala": "parte dos R$ 8,27 bi", "responsavel": "Congresso Nacional (fixa) · TSE (executa)", "base_legal": "Lei 13.487/2017 · LOA anual", "lacuna": "O valor do fundo cresce a cada eleição com baixa contestação pública e sem vínculo a desempenho." },
+    { "origem": "Fundo Eleitoral", "destino": "Diretório partidário → candidato", "mecanismo": "O TSE repassa o fundo aos partidos; a cúpula partidária decide quem recebe quanto.", "natureza": "implícita", "escala": "R$ 8,27 bi (77,7% das doações)", "responsavel": "TSE (fiscalização e julgamento das contas)", "base_legal": "Lei 13.487/2017 · Resoluções do TSE", "lacuna": "O rateio interno do fundo pela direção partidária não é transparente — os dados mostram o fluxo agregado, não o critério de distribuição." },
+    { "origem": "Doador pessoa física", "destino": "Candidato", "mecanismo": "Cidadãos doam a campanhas dentro de limites legais.", "natureza": "explícita", "escala": "R$ 1,57 bi", "responsavel": "TSE (prestação de contas) · Receita Federal (capacidade econômica)", "base_legal": "Lei 9.504/1997", "lacuna": "Doação de pessoa física de fachada (interposta) para mascarar a origem real do recurso escapa ao cruzamento." },
+    { "origem": "Empresa (CNPJ)", "destino": "Candidato (doação)", "mecanismo": "Doação empresarial direta a campanha — proibida desde 2015; o que aparece é residual.", "natureza": "implícita", "escala": "residual", "responsavel": "STF (constitucionalidade) · TSE (fiscalização)", "base_legal": "ADI 4650/2015 (STF) · Lei 13.165/2015", "lacuna": "A proibição empurra o recurso para canais opacos: terceiros, autofinanciamento e o próprio fundo." },
+    { "origem": "Empresa doadora", "destino": "Fornecedor (a MESMA pessoa jurídica)", "mecanismo": "A mesma empresa que doou à campanha depois vence contrato público — o canal doador↔fornecedor.", "natureza": "implícita", "escala": "98 empresas · R$ 2,09 mi doados → R$ 50,73 mi recebidos (24,2×)", "responsavel": "TSE (doação) · TCU e CGU (contrato) — mas ninguém cruza", "base_legal": "Lei 14.133/2021 (impessoalidade, isonomia)", "lacuna": "Não existe cruzamento automático entre a base de doações (TSE) e a de contratos (PNCP). A coincidência dos papéis passa despercebida por desenho." },
+    { "origem": "Sócio da empresa fornecedora", "destino": "Doação de campanha (ciclo)", "mecanismo": "O sócio pessoa física da empresa que fornece ao Estado doa à campanha — a volta em dois saltos.", "natureza": "implícita", "escala": "11 alertas de retroalimentação", "responsavel": "TSE (doação PF) · Receita Federal (quadro societário/QSA)", "base_legal": "Lei 9.504/1997", "lacuna": "O quadro societário (QSA) da Receita não é cruzado sistematicamente com os doadores pessoa física." },
+    { "origem": "Órgão contratante", "destino": "Fornecedor", "mecanismo": "O órgão público contrata o fornecedor via licitação no PNCP — o elo central do gasto.", "natureza": "explícita", "escala": "R$ 1.601,9 bi (base contratada)", "responsavel": "TCU (federal) · Tribunais de Contas (TCE) · CGU · controle interno", "base_legal": "Lei 14.133/2021 · Lei 8.666/1993", "lacuna": "Contratos de entes subnacionais têm cobertura desigual no PNCP; a fiscalização local é heterogênea." },
+    { "origem": "Órgão contratante", "destino": "Fornecedor (via dispensa/fracionamento)", "mecanismo": "Compra sem licitação (dispensa) ou fatiada para ficar abaixo do teto (fracionamento).", "natureza": "implícita", "escala": "R$ 10,5 bi (dispensa) + R$ 0,63 bi (fracionamento)", "responsavel": "TCU · controle interno do órgão", "base_legal": "Lei 14.133/2021, art. 75", "lacuna": "Dispensa mal justificada e compras fatiadas próximas a datas/limites raramente disparam revisão automática." },
+    { "origem": "Empresa sancionada (CEIS/CNEP)", "destino": "Órgão contratante (segue recebendo)", "mecanismo": "Empresa com sanção registrada continua a receber pagamentos públicos — o loop de controle que não trava.", "natureza": "implícita", "escala": "R$ 52,52 bi de exposição (82% do total)", "responsavel": "CGU (mantém CEIS/CNEP) · órgão contratante (deve consultar)", "base_legal": "Lei 12.846/2013 · Lei 14.133/2021, art. 156", "lacuna": "A consulta ao cadastro de sanções não bloqueia o empenho nem o pagamento — o feedback de controle não fecha no ponto que importa." },
+    { "origem": "Empenho", "destino": "Liquidação → pagamento", "mecanismo": "Reservado o recurso, reconhece-se a entrega e paga-se o fornecedor.", "natureza": "explícita", "escala": "etapa de todo contrato", "responsavel": "Controle interno do órgão · Tesouro · TCU", "base_legal": "Lei 4.320/1964 · Lei de Responsabilidade Fiscal", "lacuna": "Execução financeira avançada sem evidência física equivalente da entrega — pagar não prova que a obra/serviço saiu." },
+    { "origem": "Min. das Cidades / Caixa", "destino": "Município pequeno → fornecedor de habitação", "mecanismo": "Recurso federal de habitação aterrissa em municípios de baixa capacidade administrativa via contrato local.", "natureza": "implícita", "escala": "municípios-sinal: Olho d'Água das Flores/AL (R$ 535,8 mi em 1 contrato), Barreirinha/AM", "responsavel": "Ministério das Cidades · TCU (recurso federal) · TCE · controle interno municipal", "base_legal": "Lei 14.133/2021 · política habitacional federal", "lacuna": "Valor por contrato desproporcional ao porte do município pousa onde a fiscalização local é mais rarefeita — a zona menos legível." },
+    { "origem": "Setor técnico concentrado", "destino": "Poucos grandes fornecedores", "mecanismo": "Em nichos de conhecimento (tecnologia, educação), poucas empresas capturam fatia grande do setor.", "natureza": "implícita", "escala": "conc5 Tecnologia 20,5% · Educação 20,0%", "responsavel": "CADE (concorrência/cartel) · TCU · Ministério Público", "base_legal": "Lei 12.529/2011 (CADE) · Lei 14.133/2021", "lacuna": "Concentração e possível conluio em nichos técnicos não são monitorados sistematicamente por licitação." },
+    { "origem": "Habitação pública", "destino": "Mercado imobiliário", "mecanismo": "Dinheiro público de moradia irriga o setor imobiliário (CNAE 68) e o mercado construído.", "natureza": "implícita", "escala": "R$ 3,5 bi ao setor imobiliário", "responsavel": "Ministério das Cidades · Caixa (FGTS)", "base_legal": "política habitacional · Lei 14.133/2021", "lacuna": "O efeito sobre o preço da terra e do imóvel (especulação) não é mensurável com dados de licitação — fronteira reconhecida do projeto." },
+    { "origem": "Exposição atual", "destino": "Exposição projetada (2026/2028)", "mecanismo": "Os padrões de risco medidos hoje projetam a escala de exposição para os anos eleitorais.", "natureza": "implícita", "escala": "2026: R$ 32,46 bi · 2028: até R$ 50,1 bi (agravado)", "responsavel": "TCU e CGU (avaliação prospectiva de risco)", "base_legal": "Lei 14.133/2021 (gestão de riscos, art. 11)", "lacuna": "Não há dever legal de projeção prospectiva de risco fiscal por ciclo eleitoral — a antecipação depende de iniciativa do controle." }
+  ],
+  "sintese": "As ligações do dinheiro público brasileiro não formam uma conspiração; formam um circuito com competências repartidas e uma costura ausente. O financiamento das campanhas é hoje majoritariamente público e flui pela cúpula partidária; quem é eleito influencia quem contrata; o contrato paga fornecedores — e parte deles (ou seus sócios) doou à campanha, fechando a volta. Cada elo tem um responsável institucional real e uma base legal — TSE, TCU, TCE, CGU, CADE, Receita, controle interno. O problema não é falta de regra nem falta de fiscal: é que cada órgão enxerga só o seu pedaço, e a informação que fecharia o ciclo mora em bases que não conversam. É exatamente essa costura que a plataforma faz — e onde há mais a crescer: tornar o cruzamento contínuo, auditável e com lastro de ponta a ponta.",
+  "maior_lacuna": "Não existe cruzamento automático e responsável entre as três bases que, juntas, fechariam o ciclo: o TSE (quem doou), o PNCP (quem recebeu contrato) e o CEIS/CNEP (quem está sancionado). Cada órgão vê seu pedaço; ninguém tem o dever de costurar. É essa costura que a plataforma demonstra ser possível — e que a lei ainda não obriga.",
+  "contagem": { "brutas": 59, "verificadas": 14, "dominios": 6 },
+  "lastro": {
+    "definicao": "Mapa das ligações institucionais do dinheiro público — quem se conecta a quem, quem responde por cada elo, e onde a responsabilização falha. Mede relações e responsabilidades; não mede culpa individual nem prova fraude.",
+    "fonte_primaria": "PNCP (contratos), TSE (doações), Câmara/CEAP (cota), Receita Federal (CNPJ/CNAE/QSA), CGU (CEIS/CNEP)",
+    "referencia_original": "Endpoints internos /api/fornecedores/setores, /api/doacoes/*, /api/fraude/projecao, /api/habitacao/panorama; tabelas contratos, doacoes, empresa_setor, alertas, sancoes",
+    "extracao": "Retrato congelado de 17/07/2026; dumps públicos e APIs sem token; 4,47M contratos, 2,15M doações, 409k empresas classificadas, 24,9k sanções",
+    "transformacao": "Agregação por CNPJ (14 díg.) e CNPJ-base (8 díg.); cruzamentos doador×fornecedor, sancionado×contrato, CNAE×fornecedor; filtro de contratos plausíveis (≤ R$ 1 bi)",
+    "formula": "Ligações mapeadas por 6 personas de domínio (workflow multiagente) e consolidadas editorialmente; auditoria = recomputação SQL de cada número-âncora vs. valor publicado",
+    "dimensao": "Nacional; valores nominais em reais; período de cobertura do PNCP (2023–2026, adesão crescente)",
+    "cobertura": "Contratos: entes aderentes ao PNCP (cobertura subnacional desigual). Doações: eleições de 2022 (federal) e 2024 (municipal). Sanções: CEIS/CNEP na data de extração.",
+    "qualidade": "Reconciliação: 10/10 métricas-âncora batem com a recomputação direta (0 divergências). Ligações verificadas quanto à competência do órgão e à existência da base legal.",
+    "incerteza": "Ligações implícitas são padrões de EXPOSIÇÃO a risco, não fraude provada. Projeções 2026/2028 são cenários rotulados, não previsões.",
+    "licenca": "Dados públicos oficiais, sem token; reutilização livre com atribuição às fontes primárias.",
+    "reproducao": "Rodar os endpoints listados e o script de auditoria; o mapa de ligações é reproduzível a partir dos mesmos cruzamentos.",
+    "indice_confianca": {
+      "nota": 82,
+      "componentes": [
+        { "criterio": "Autoridade da fonte", "nota": 95 },
+        { "criterio": "Atualização", "nota": 80 },
+        { "criterio": "Cobertura", "nota": 70 },
+        { "criterio": "Completude", "nota": 78 },
+        { "criterio": "Reconciliação", "nota": 100 },
+        { "criterio": "Estabilidade metodológica", "nota": 75 },
+        { "criterio": "Reprodutibilidade", "nota": 90 }
+      ]
+    }
+  }
+}

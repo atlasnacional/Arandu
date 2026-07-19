@@ -88,16 +88,18 @@ canon completo](docs/canon.md) e [as abordagens e métodos](docs/abordagens-e-me
 
 ## O que dá para ver
 
-A plataforma tem **mais de 30 telas**, distribuídas em sete frentes:
+A plataforma tem **51 telas**, distribuídas em oito frentes
+([inventário completo](docs/telas.md)):
 
 | Frente | O que responde |
 |---|---|
-| **Panorama** | a visão geral do país num painel só |
-| **Violência · o dano** | quem morre, com o quê, onde e por quê — mapa, diagnóstico, regiões, juventude, álcool, gênero, suicídio, saúde mental, a economia do tempo |
+| **Panorama** | a visão geral do país num painel só, e a proposta de rastreabilidade — com as lacunas declaradas |
+| **Violência · o dano** | quem morre, com o quê, onde e por quê — mapa, diagnóstico, regiões, juventude, álcool, gênero e LGBTQIA+, suicídio, saúde mental, o funil da impunidade, povos indígenas e quilombolas, a economia do tempo |
 | **Violência · o dinheiro** | a carência e a morte, presídio ou escola, o mercado da segurança, quem representa quem, o dinheiro e a violência |
-| **Poder público** | deputados, senadores, municípios, templos religiosos |
-| **Dinheiro público** | licitações, fornecedores, diários oficiais |
-| **Investigação** | grafo de relações, radar de alertas e o modelo de risco por machine learning |
+| **Economia** | o painel macroeconômico do Banco Central e o tecido empresarial do país (27,8 mi de empresas ativas) |
+| **Poder público** | deputados, senadores, o custo da política, inativos e supersalários, o ciclo eleitoral municipal, municípios, templos religiosos |
+| **Dinheiro público** | licitações, fornecedores, setores e atividades da economia, habitação, doações de campanha, diários oficiais |
+| **Investigação** | o apanhado geral, o rastro do dinheiro por CNPJ, grafo de relações, radar de alertas, projeção de rombos e o modelo de risco por machine learning |
 | **Abordagens e pensamento** | o manifesto, as 12 teses e o canon de 197 pensadores |
 
 O **radar de fraude** cruza as bases com **15 gatilhos** — do fornecedor
@@ -105,16 +107,52 @@ sancionado que recebe dinheiro público ao ciclo fechado *cota → empresa → s
 doação → parlamentar*, passando por fracionamento de contratos, notas repetidas e
 concentração de fornecedor. O **modelo de risco** complementa com um score de ML.
 
+Alguns números que a plataforma põe na mesa hoje:
+
+| | |
+|---|---|
+| **R$ 1,60 tri** | base contratada mapeada (PNCP, 2023–2026), 97,6% classificada por setor econômico |
+| **77,69%** | do financiamento de campanha (R$ 10,64 bi) já vem de **fundo público via partido**, não do eleitor |
+| **98 empresas** | doaram a campanhas **e** receberam dinheiro público |
+| **2.553 empresas** | seguiram contratando com o poder público **sob sanção vigente** (R$ 12,41 bi) |
+| **R$ 64,18 bi** | exposição a risco identificada hoje — *sinal, não fraude confirmada* |
+| **R$ 87,3 bi/ano** | aposentadorias e pensões do Executivo federal, com 1.161 supersalários acima do teto |
+
+---
+
+## Como você sabe disso?
+
+A pergunta que devolve credibilidade a um painel público. O Arandu responde a ela
+**dentro do próprio dado**: cada indicador carrega, junto com o valor, a ficha do
+que ele mede, **do que ele não mede**, de onde veio e com quanta confiança.
+
+- **Fontes** — catálogo formal de cada sistema público, com licença, cobertura real e as pegadinhas conhecidas.
+- **Cruzamentos** — a chave literal de cada join (`fornecedor_ni = sancoes.cnpj_cpf`), para que o cruzamento possa ser **contestado**.
+- **Lastro** — a ficha metodológica completa por indicador: extração, transformação, fórmula, incerteza, reprodução e um **índice de confiança** (0–100).
+- **Auditoria** — a plataforma **recomputa do banco** as métricas que publica e mostra as divergências. Hoje: nenhuma.
+- **Contra-leitura** — cada análise interpretativa vai ao ar acompanhada do seu próprio contra-argumento.
+
+Toda definição de lastro tem duas metades — *"mede X; **não** prova Y"*. Não é
+estilo: é a defesa contra o poder de sugestão de um gráfico bonito.
+
+📖 [Lastro, proveniência e auditoria](docs/lastro-e-proveniencia.md)
+
 ---
 
 ## As fontes
 
-Nenhuma exige token ou cadastro:
+Nenhuma exige token ou cadastro — isso é uma **invariante do projeto**: se uma
+fonte exigir chave, ela não entra.
 
-**Câmara dos Deputados · Senado · PNCP** (licitações e contratos) · **TSE** (doações
-de campanha) · **CGU** (sanções — CEIS/CNEP) · **Receita Federal** (quadro
-societário) · **IBGE · Ipea · DataSUS** (violência, saúde, território) · **Querido
-Diário** (diários oficiais municipais).
+**Câmara dos Deputados · Senado** (cotas CEAP/CEAPS) · **PNCP** (licitações e
+contratos) · **TSE** (candidaturas e doações de campanha) · **CGU** (sanções —
+CEIS/CNEP) · **Receita Federal** (cadastro de CNPJ e quadro societário) · **Banco
+Central/SGS** (séries macroeconômicas) · **SIAPE** (inativos e pensões) · **IBGE**
+(Censo 2022, população, malhas) · **Ipea/Atlas da Violência** · **DataSUS**
+(SIM e SINAN) · **CNES** (rede de saúde mental) · **FUNAI · INCRA · Fundação
+Palmares · CIMI** (territórios indígenas e quilombolas) · **OMS/GHO e Our World in
+Data** (comparação internacional) · **Querido Diário** (diários oficiais
+municipais).
 
 > ⚖️ **Importante:** tudo que o Arandu aponta são **indícios estatísticos e
 > cruzamentos de bases públicas** — não prova de irregularidade. Homônimos existem,
@@ -129,9 +167,14 @@ Aqui está a **build estática** do Arandu — a demonstração publicada, servi
 arquivos (`index.html`, `assets/` e `demo/*.json`). No modo demonstração os dados
 são um retrato congelado: os filtros e buscas não consultam um servidor.
 
-A documentação aprofundada — arquitetura, fontes de dados e suas pegadinhas, os
-gatilhos do radar, o modelo de ML por dentro, a expansão de dados e o roadmap — está
-na pasta [`docs/`](docs/).
+Na prática isso significa que as telas paramétricas trazem um recorte — 28 setores,
+84 empresas no rastro do dinheiro, 5 fichas de lastro. Buscar um CNPJ fora desse
+conjunto não retorna nada: é limitação do modo demo, não falha da plataforma. O
+mecanismo está descrito em [arquitetura.md](docs/arquitetura.md#o-modo-demonstração).
+
+A documentação aprofundada — o panorama das telas, o lastro e a auditoria, a
+arquitetura, as fontes de dados e suas pegadinhas, os gatilhos do radar, o modelo de
+ML por dentro, a expansão de dados e o roadmap — está na pasta [`docs/`](docs/).
 
 ---
 

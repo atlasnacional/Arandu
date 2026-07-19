@@ -14,10 +14,17 @@ Antes do dado vem a lente. Esta é a base que sustenta a leitura do país.
 | [O canon](canon.md) | a base teórica: **197 pensadores em 28 eixos**, cada um ligado ao que o dado mede |
 | [Abordagens e métodos](abordagens-e-metodos.md) | o que o mundo já testou na prática, e as formas de medir a metrópole |
 
+## Método — como o número se sustenta
+
+| Guia | O que é |
+|---|---|
+| [Lastro, proveniência e auditoria](lastro-e-proveniencia.md) | como cada indicador declara o que mede, **o que não mede** e com que confiança — e como a plataforma audita os próprios números |
+
 ## Técnico — como funciona
 
 | Guia | Para quem |
 |---|---|
+| [As telas — panorama geral](telas.md) | quem quer o mapa das 51 telas e o dado que alimenta cada uma |
 | [Arquitetura e fluxo de dados](arquitetura.md) | quem quer entender ou modificar o código |
 | [Fontes de dados e pegadinhas](fontes-de-dados.md) | quem vai importar/atualizar dados |
 | [Radar de fraude — os 15 gatilhos](radar-de-fraude.md) | quem vai investigar ou ajustar limiares |
